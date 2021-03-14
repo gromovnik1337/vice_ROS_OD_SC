@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/luxc/ROS_OD_SC/catkin_ws/src/agitr/hello.cpp
+/home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/hello.cpp
 ros/ros.h
 -
 

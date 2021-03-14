@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/luxc/ROS_OD_SC/catkin_ws/src/agitr/hello.cpp" "/home/luxc/ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/hello.dir/hello.cpp.o"
+  "/home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/hello.cpp" "/home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/hello.dir/hello.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,7 +17,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/luxc/ROS_OD_SC/catkin_ws/src/agitr/inlcude"
+  "/home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/inlcude"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   )
