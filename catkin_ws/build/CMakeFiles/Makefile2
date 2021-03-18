@@ -74,6 +74,7 @@ CMAKE_BINARY_DIR = /home/luxc/vice_ROS_OD_SC/catkin_ws/build
 # The main recursive "all" target.
 all: gtest/all
 all: agitr/all
+all: acquisition/all
 all: loam_livox/all
 
 .PHONY : all
@@ -81,6 +82,7 @@ all: loam_livox/all
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: agitr/preinstall
+preinstall: acquisition/preinstall
 preinstall: loam_livox/preinstall
 
 .PHONY : preinstall
@@ -93,9 +95,28 @@ clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/doxygen.dir/clean
 clean: gtest/clean
 clean: agitr/clean
+clean: acquisition/clean
 clean: loam_livox/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory acquisition
+
+# Recursive "all" directory target.
+acquisition/all: acquisition/CMakeFiles/acquire.dir/all
+
+.PHONY : acquisition/all
+
+# Recursive "preinstall" directory target.
+acquisition/preinstall:
+
+.PHONY : acquisition/preinstall
+
+# Recursive "clean" directory target.
+acquisition/clean: acquisition/CMakeFiles/acquire.dir/clean
+
+.PHONY : acquisition/clean
 
 #=============================================================================
 # Directory level rules for directory agitr
@@ -396,7 +417,7 @@ CMakeFiles/doxygen.dir/clean:
 gtest/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=4,5,6,7 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=6,7,8,9 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -423,7 +444,7 @@ gtest/googlemock/CMakeFiles/gmock_main.dir/clean:
 gtest/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=1,2,3 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=3,4,5 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -450,7 +471,7 @@ gtest/googlemock/CMakeFiles/gmock.dir/clean:
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=10,11 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=12,13 "Built target gtest_main"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -477,7 +498,7 @@ gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean:
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=8,9 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=10,11 "Built target gtest"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -693,7 +714,7 @@ agitr/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
 agitr/CMakeFiles/hello.dir/all:
 	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/depend
 	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=12,13 "Built target hello"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=14,15 "Built target hello"
 .PHONY : agitr/CMakeFiles/hello.dir/all
 
 # Build rule for subdir invocation for target.
@@ -930,13 +951,40 @@ agitr/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
 .PHONY : agitr/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
+# Target rules for target acquisition/CMakeFiles/acquire.dir
+
+# All Build rule for target.
+acquisition/CMakeFiles/acquire.dir/all:
+	$(MAKE) $(MAKESILENT) -f acquisition/CMakeFiles/acquire.dir/build.make acquisition/CMakeFiles/acquire.dir/depend
+	$(MAKE) $(MAKESILENT) -f acquisition/CMakeFiles/acquire.dir/build.make acquisition/CMakeFiles/acquire.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=1,2 "Built target acquire"
+.PHONY : acquisition/CMakeFiles/acquire.dir/all
+
+# Build rule for subdir invocation for target.
+acquisition/CMakeFiles/acquire.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 acquisition/CMakeFiles/acquire.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 0
+.PHONY : acquisition/CMakeFiles/acquire.dir/rule
+
+# Convenience name for target.
+acquire: acquisition/CMakeFiles/acquire.dir/rule
+
+.PHONY : acquire
+
+# clean rule for target.
+acquisition/CMakeFiles/acquire.dir/clean:
+	$(MAKE) $(MAKESILENT) -f acquisition/CMakeFiles/acquire.dir/build.make acquisition/CMakeFiles/acquire.dir/clean
+.PHONY : acquisition/CMakeFiles/acquire.dir/clean
+
+#=============================================================================
 # Target rules for target loam_livox/CMakeFiles/read_camera.dir
 
 # All Build rule for target.
 loam_livox/CMakeFiles/read_camera.dir/all:
 	$(MAKE) $(MAKESILENT) -f loam_livox/CMakeFiles/read_camera.dir/build.make loam_livox/CMakeFiles/read_camera.dir/depend
 	$(MAKE) $(MAKESILENT) -f loam_livox/CMakeFiles/read_camera.dir/build.make loam_livox/CMakeFiles/read_camera.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=18,19 "Built target read_camera"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=20,21 "Built target read_camera"
 .PHONY : loam_livox/CMakeFiles/read_camera.dir/all
 
 # Build rule for subdir invocation for target.
@@ -963,7 +1011,7 @@ loam_livox/CMakeFiles/read_camera.dir/clean:
 loam_livox/CMakeFiles/livox_laserMapping.dir/all:
 	$(MAKE) $(MAKESILENT) -f loam_livox/CMakeFiles/livox_laserMapping.dir/build.make loam_livox/CMakeFiles/livox_laserMapping.dir/depend
 	$(MAKE) $(MAKESILENT) -f loam_livox/CMakeFiles/livox_laserMapping.dir/build.make loam_livox/CMakeFiles/livox_laserMapping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=14,15 "Built target livox_laserMapping"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=16,17 "Built target livox_laserMapping"
 .PHONY : loam_livox/CMakeFiles/livox_laserMapping.dir/all
 
 # Build rule for subdir invocation for target.
@@ -990,7 +1038,7 @@ loam_livox/CMakeFiles/livox_laserMapping.dir/clean:
 loam_livox/CMakeFiles/livox_scanRegistration.dir/all:
 	$(MAKE) $(MAKESILENT) -f loam_livox/CMakeFiles/livox_scanRegistration.dir/build.make loam_livox/CMakeFiles/livox_scanRegistration.dir/depend
 	$(MAKE) $(MAKESILENT) -f loam_livox/CMakeFiles/livox_scanRegistration.dir/build.make loam_livox/CMakeFiles/livox_scanRegistration.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=16,17 "Built target livox_scanRegistration"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=18,19 "Built target livox_scanRegistration"
 .PHONY : loam_livox/CMakeFiles/livox_scanRegistration.dir/all
 
 # Build rule for subdir invocation for target.

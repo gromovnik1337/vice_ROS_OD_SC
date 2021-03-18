@@ -406,7 +406,7 @@ OPENNI_INCLUDE_DIRS:PATH=/usr/include/ni
 OPENNI_LIBRARY:FILEPATH=/usr/lib/libOpenNI.so
 
 //The directory containing a CMake configuration file for OpenCV.
-OpenCV_DIR:PATH=/usr/local/lib/cmake/opencv4
+OpenCV_DIR:PATH=/usr/share/OpenCV
 
 //path to 2d headers
 PCL_2D_INCLUDE_DIR:PATH=/usr/include/pcl-1.8
@@ -680,6 +680,12 @@ _gtest_INCLUDES:FILEPATH=/usr/include/gtest/gtest.h
 
 //Path to a file.
 _gtest_SOURCES:FILEPATH=/usr/src/gtest/src/gtest.cc
+
+//Value Computed by CMake
+acquisition_BINARY_DIR:STATIC=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/acquisition
+
+//Value Computed by CMake
+acquisition_SOURCE_DIR:STATIC=/home/luxc/vice_ROS_OD_SC/catkin_ws/src/acquisition
 
 //The directory containing a CMake configuration file for actionlib.
 actionlib_DIR:PATH=/opt/ros/melodic/share/actionlib/cmake
@@ -1044,7 +1050,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -1098,7 +1104,7 @@ FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[/usr/include][cfound components: sy
 //Details about finding Flann
 FIND_PACKAGE_MESSAGE_DETAILS_Flann:INTERNAL=[/usr/lib/x86_64-linux-gnu/libflann_cpp_s.a][/usr/include][v()]
 //Details about finding OpenCV
-FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v4.5.1()]
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr][v3.2.0(3)]
 //Details about finding OpenNI2
 FIND_PACKAGE_MESSAGE_DETAILS_OpenNI2:INTERNAL=[/usr/lib/libOpenNI2.so][/usr/include/openni2][v()]
 //Details about finding PCL

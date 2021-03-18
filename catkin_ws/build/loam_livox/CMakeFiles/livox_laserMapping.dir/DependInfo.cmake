@@ -52,7 +52,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/pcl-1.8"
   "/usr/include/ni"
   "/usr/include/openni2"
-  "/usr/local/include/opencv4"
   "/home/luxc/vice_ROS_OD_SC/catkin_ws/src/loam_livox/./include/tools"
   "/usr/include/eigen3"
   "/usr/include/x86_64-linux-gnu/qt5"

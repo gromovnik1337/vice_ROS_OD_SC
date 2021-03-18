@@ -4,5 +4,10 @@
         "/home/luxc/MYNT-EYE-D-SDK/wrappers/ros/devel/lib/python2.7/dist-packages",
         "/home/luxc/catkin_ws/devel/lib/python2.7/dist-packages",
         "/opt/ros/melodic/lib/python2.7/dist-packages"
-    ]
+    ],
+    "files.associations": {
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp"
+    }
 }

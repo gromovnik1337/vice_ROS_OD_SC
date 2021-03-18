@@ -512,6 +512,19 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named acquire
+
+# Build rule for target.
+acquire: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 acquire
+.PHONY : acquire
+
+# fast build rule for target.
+acquire/fast:
+	$(MAKE) $(MAKESILENT) -f acquisition/CMakeFiles/acquire.dir/build.make acquisition/CMakeFiles/acquire.dir/build
+.PHONY : acquire/fast
+
+#=============================================================================
 # Target rules for targets named read_camera
 
 # Build rule for target.
@@ -1213,6 +1226,7 @@ help:
 	@echo "... topic_tools_generate_messages_lisp"
 	@echo "... topic_tools_generate_messages_nodejs"
 	@echo "... topic_tools_generate_messages_py"
+	@echo "... acquire"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
