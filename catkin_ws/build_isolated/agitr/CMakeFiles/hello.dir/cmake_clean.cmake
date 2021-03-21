@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "/home/luxc/vice_ROS_OD_SC/catkin_ws/devel_isolated/agitr/lib/agitr/hello"
   "/home/luxc/vice_ROS_OD_SC/catkin_ws/devel_isolated/agitr/lib/agitr/hello.pdb"
-  "CMakeFiles/hello.dir/hello.cpp.o"
+  "CMakeFiles/hello.dir/src/hello.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

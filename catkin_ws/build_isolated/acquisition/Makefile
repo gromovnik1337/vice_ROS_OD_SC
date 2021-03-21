@@ -187,17 +187,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named acquisition
+# Target rules for targets named acquire
 
 # Build rule for target.
-acquisition: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 acquisition
-.PHONY : acquisition
+acquire: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 acquire
+.PHONY : acquire
 
 # fast build rule for target.
-acquisition/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquisition.dir/build.make CMakeFiles/acquisition.dir/build
-.PHONY : acquisition/fast
+acquire/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquire.dir/build.make CMakeFiles/acquire.dir/build
+.PHONY : acquire/fast
 
 #=============================================================================
 # Target rules for targets named std_msgs_generate_messages_nodejs
@@ -517,7 +517,7 @@ src/acquisition.o: src/acquisition.cpp.o
 
 # target to build an object file
 src/acquisition.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquisition.dir/build.make CMakeFiles/acquisition.dir/src/acquisition.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquire.dir/build.make CMakeFiles/acquire.dir/src/acquisition.cpp.o
 .PHONY : src/acquisition.cpp.o
 
 src/acquisition.i: src/acquisition.cpp.i
@@ -526,7 +526,7 @@ src/acquisition.i: src/acquisition.cpp.i
 
 # target to preprocess a source file
 src/acquisition.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquisition.dir/build.make CMakeFiles/acquisition.dir/src/acquisition.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquire.dir/build.make CMakeFiles/acquire.dir/src/acquisition.cpp.i
 .PHONY : src/acquisition.cpp.i
 
 src/acquisition.s: src/acquisition.cpp.s
@@ -535,7 +535,7 @@ src/acquisition.s: src/acquisition.cpp.s
 
 # target to generate assembly for a file
 src/acquisition.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquisition.dir/build.make CMakeFiles/acquisition.dir/src/acquisition.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquire.dir/build.make CMakeFiles/acquire.dir/src/acquisition.cpp.s
 .PHONY : src/acquisition.cpp.s
 
 # Help Target
@@ -571,7 +571,7 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... tests"
-	@echo "... acquisition"
+	@echo "... acquire"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"

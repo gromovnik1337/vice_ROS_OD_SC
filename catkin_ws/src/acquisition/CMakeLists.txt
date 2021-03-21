@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.0.2)
 # Name of the project
 project(acquisition)
 
-# Find the catkin build system, and any other packaes on which the build depends
+# Find the catkin build system, and any other packages on which the build depends
 find_package(catkin REQUIRED COMPONENTS roscpp)
 find_package(PCL 1.8 REQUIRED)
 

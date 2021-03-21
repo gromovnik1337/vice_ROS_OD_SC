@@ -72,7 +72,7 @@ CMAKE_BINARY_DIR = /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisitio
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/acquisition.dir/all
+all: CMakeFiles/acquire.dir/all
 all: gtest/all
 
 .PHONY : all
@@ -83,7 +83,7 @@ preinstall: gtest/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/acquisition.dir/clean
+clean: CMakeFiles/acquire.dir/clean
 clean: CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 clean: CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 clean: CMakeFiles/doxygen.dir/clean
@@ -166,31 +166,31 @@ gtest/googlemock/gtest/clean: gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 .PHONY : gtest/googlemock/gtest/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/acquisition.dir
+# Target rules for target CMakeFiles/acquire.dir
 
 # All Build rule for target.
-CMakeFiles/acquisition.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquisition.dir/build.make CMakeFiles/acquisition.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquisition.dir/build.make CMakeFiles/acquisition.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisition/CMakeFiles --progress-num=1,2 "Built target acquisition"
-.PHONY : CMakeFiles/acquisition.dir/all
+CMakeFiles/acquire.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquire.dir/build.make CMakeFiles/acquire.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquire.dir/build.make CMakeFiles/acquire.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisition/CMakeFiles --progress-num=1,2 "Built target acquire"
+.PHONY : CMakeFiles/acquire.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/acquisition.dir/rule: cmake_check_build_system
+CMakeFiles/acquire.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisition/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/acquisition.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/acquire.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisition/CMakeFiles 0
-.PHONY : CMakeFiles/acquisition.dir/rule
+.PHONY : CMakeFiles/acquire.dir/rule
 
 # Convenience name for target.
-acquisition: CMakeFiles/acquisition.dir/rule
+acquire: CMakeFiles/acquire.dir/rule
 
-.PHONY : acquisition
+.PHONY : acquire
 
 # clean rule for target.
-CMakeFiles/acquisition.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquisition.dir/build.make CMakeFiles/acquisition.dir/clean
-.PHONY : CMakeFiles/acquisition.dir/clean
+CMakeFiles/acquire.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/acquire.dir/build.make CMakeFiles/acquire.dir/clean
+.PHONY : CMakeFiles/acquire.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/std_msgs_generate_messages_nodejs.dir

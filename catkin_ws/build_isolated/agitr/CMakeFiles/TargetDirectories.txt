@@ -1,6 +1,7 @@
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles/install/strip.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles/rebuild_cache.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles/test.dir
+/home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles/pubvel.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles/hello.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles/std_msgs_generate_messages_nodejs.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir

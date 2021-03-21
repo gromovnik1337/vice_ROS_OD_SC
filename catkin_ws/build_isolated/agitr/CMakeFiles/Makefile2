@@ -72,6 +72,7 @@ CMAKE_BINARY_DIR = /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/pubvel.dir/all
 all: CMakeFiles/hello.dir/all
 all: gtest/all
 
@@ -83,6 +84,7 @@ preinstall: gtest/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/pubvel.dir/clean
 clean: CMakeFiles/hello.dir/clean
 clean: CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 clean: CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
@@ -164,6 +166,33 @@ gtest/googlemock/gtest/clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/c
 gtest/googlemock/gtest/clean: gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 
 .PHONY : gtest/googlemock/gtest/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/pubvel.dir
+
+# All Build rule for target.
+CMakeFiles/pubvel.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubvel.dir/build.make CMakeFiles/pubvel.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubvel.dir/build.make CMakeFiles/pubvel.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles --progress-num=14,15 "Built target pubvel"
+.PHONY : CMakeFiles/pubvel.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/pubvel.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/pubvel.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles 0
+.PHONY : CMakeFiles/pubvel.dir/rule
+
+# Convenience name for target.
+pubvel: CMakeFiles/pubvel.dir/rule
+
+.PHONY : pubvel
+
+# clean rule for target.
+CMakeFiles/pubvel.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubvel.dir/build.make CMakeFiles/pubvel.dir/clean
+.PHONY : CMakeFiles/pubvel.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/hello.dir

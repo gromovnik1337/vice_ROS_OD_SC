@@ -7,6 +7,3 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/luxc/vice_ROS_OD_SC/catkin_ws/devel_isolated/agitr:$CMAKE_PREFIX_PATH"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/luxc/vice_ROS_OD_SC/catkin_ws/devel_isolated/agitr/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr:$ROS_PACKAGE_PATH"

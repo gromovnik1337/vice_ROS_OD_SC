@@ -187,6 +187,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named pubvel
+
+# Build rule for target.
+pubvel: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pubvel
+.PHONY : pubvel
+
+# fast build rule for target.
+pubvel/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubvel.dir/build.make CMakeFiles/pubvel.dir/build
+.PHONY : pubvel/fast
+
+#=============================================================================
 # Target rules for targets named hello
 
 # Build rule for target.
@@ -511,32 +524,59 @@ gtest/fast:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
-hello.o: hello.cpp.o
+src/hello.o: src/hello.cpp.o
 
-.PHONY : hello.o
+.PHONY : src/hello.o
 
 # target to build an object file
-hello.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/hello.cpp.o
-.PHONY : hello.cpp.o
+src/hello.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/hello.cpp.o
+.PHONY : src/hello.cpp.o
 
-hello.i: hello.cpp.i
+src/hello.i: src/hello.cpp.i
 
-.PHONY : hello.i
+.PHONY : src/hello.i
 
 # target to preprocess a source file
-hello.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/hello.cpp.i
-.PHONY : hello.cpp.i
+src/hello.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/hello.cpp.i
+.PHONY : src/hello.cpp.i
 
-hello.s: hello.cpp.s
+src/hello.s: src/hello.cpp.s
 
-.PHONY : hello.s
+.PHONY : src/hello.s
 
 # target to generate assembly for a file
-hello.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/hello.cpp.s
-.PHONY : hello.cpp.s
+src/hello.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello.dir/build.make CMakeFiles/hello.dir/src/hello.cpp.s
+.PHONY : src/hello.cpp.s
+
+src/pubvel.o: src/pubvel.cpp.o
+
+.PHONY : src/pubvel.o
+
+# target to build an object file
+src/pubvel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubvel.dir/build.make CMakeFiles/pubvel.dir/src/pubvel.cpp.o
+.PHONY : src/pubvel.cpp.o
+
+src/pubvel.i: src/pubvel.cpp.i
+
+.PHONY : src/pubvel.i
+
+# target to preprocess a source file
+src/pubvel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubvel.dir/build.make CMakeFiles/pubvel.dir/src/pubvel.cpp.i
+.PHONY : src/pubvel.cpp.i
+
+src/pubvel.s: src/pubvel.cpp.s
+
+.PHONY : src/pubvel.s
+
+# target to generate assembly for a file
+src/pubvel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubvel.dir/build.make CMakeFiles/pubvel.dir/src/pubvel.cpp.s
+.PHONY : src/pubvel.cpp.s
 
 # Help Target
 help:
@@ -576,9 +616,13 @@ help:
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... hello"
-	@echo "... hello.o"
-	@echo "... hello.i"
-	@echo "... hello.s"
+	@echo "... pubvel"
+	@echo "... src/hello.o"
+	@echo "... src/hello.i"
+	@echo "... src/hello.s"
+	@echo "... src/pubvel.o"
+	@echo "... src/pubvel.i"
+	@echo "... src/pubvel.s"
 .PHONY : help
 
 

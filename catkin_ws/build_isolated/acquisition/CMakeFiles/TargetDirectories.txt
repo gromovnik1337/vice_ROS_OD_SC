@@ -1,7 +1,7 @@
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisition/CMakeFiles/install/strip.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisition/CMakeFiles/rebuild_cache.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisition/CMakeFiles/test.dir
-/home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisition/CMakeFiles/acquisition.dir
+/home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisition/CMakeFiles/acquire.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisition/CMakeFiles/std_msgs_generate_messages_nodejs.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisition/CMakeFiles/std_msgs_generate_messages_lisp.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/acquisition/CMakeFiles/install/local.dir

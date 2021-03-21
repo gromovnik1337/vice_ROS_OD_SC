@@ -11,11 +11,18 @@ find_package(catkin REQUIRED COMPONENTS roscpp)
 catkin_package()
 
 # Specify the location of header files
-include_directories(inlcude ${catkin_INCLUDE_DIRS})
+# Specify the location of header files
+include_directories(
+    ${catkin_INCLUDE_DIRS} 
+    ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/src
+)
 
 # Declare the executable, along with its source files. For multiple executables multiple copies of this line 
 # are to be used.
-add_executable(hello hello.cpp)
+add_executable(hello ./src/hello.cpp)
+add_executable(pubvel ./src/pubvel.cpp)
 
 # Specify libraries aganist which to link. Again, this line is to be copied for each distinct executable in the package
 target_link_libraries(hello ${catkin_LIBRARIES})
+target_link_libraries(pubvel ${catkin_LIBRARIES})
