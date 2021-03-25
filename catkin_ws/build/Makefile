@@ -304,6 +304,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named pubvel
+
+# Build rule for target.
+pubvel: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pubvel
+.PHONY : pubvel
+
+# fast build rule for target.
+pubvel/fast:
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/build
+.PHONY : pubvel/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
 
 # Build rule for target.
@@ -1234,6 +1247,7 @@ help:
 	@echo "... hello"
 	@echo "... livox_laserMapping"
 	@echo "... livox_scanRegistration"
+	@echo "... pubvel"
 	@echo "... read_camera"
 .PHONY : help
 

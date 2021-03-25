@@ -122,6 +122,7 @@ acquisition/clean: acquisition/CMakeFiles/acquire.dir/clean
 # Directory level rules for directory agitr
 
 # Recursive "all" directory target.
+agitr/all: agitr/CMakeFiles/pubvel.dir/all
 agitr/all: agitr/CMakeFiles/hello.dir/all
 
 .PHONY : agitr/all
@@ -132,6 +133,7 @@ agitr/preinstall:
 .PHONY : agitr/preinstall
 
 # Recursive "clean" directory target.
+agitr/clean: agitr/CMakeFiles/pubvel.dir/clean
 agitr/clean: agitr/CMakeFiles/roscpp_generate_messages_py.dir/clean
 agitr/clean: agitr/CMakeFiles/roscpp_generate_messages_eus.dir/clean
 agitr/clean: agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
@@ -517,6 +519,33 @@ gtest: gtest/googlemock/gtest/CMakeFiles/gtest.dir/rule
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean:
 	$(MAKE) $(MAKESILENT) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
+
+#=============================================================================
+# Target rules for target agitr/CMakeFiles/pubvel.dir
+
+# All Build rule for target.
+agitr/CMakeFiles/pubvel.dir/all:
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/depend
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=20,21 "Built target pubvel"
+.PHONY : agitr/CMakeFiles/pubvel.dir/all
+
+# Build rule for subdir invocation for target.
+agitr/CMakeFiles/pubvel.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/pubvel.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 0
+.PHONY : agitr/CMakeFiles/pubvel.dir/rule
+
+# Convenience name for target.
+pubvel: agitr/CMakeFiles/pubvel.dir/rule
+
+.PHONY : pubvel
+
+# clean rule for target.
+agitr/CMakeFiles/pubvel.dir/clean:
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/clean
+.PHONY : agitr/CMakeFiles/pubvel.dir/clean
 
 #=============================================================================
 # Target rules for target agitr/CMakeFiles/roscpp_generate_messages_py.dir
@@ -984,7 +1013,7 @@ acquisition/CMakeFiles/acquire.dir/clean:
 loam_livox/CMakeFiles/read_camera.dir/all:
 	$(MAKE) $(MAKESILENT) -f loam_livox/CMakeFiles/read_camera.dir/build.make loam_livox/CMakeFiles/read_camera.dir/depend
 	$(MAKE) $(MAKESILENT) -f loam_livox/CMakeFiles/read_camera.dir/build.make loam_livox/CMakeFiles/read_camera.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=20,21 "Built target read_camera"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=22,23 "Built target read_camera"
 .PHONY : loam_livox/CMakeFiles/read_camera.dir/all
 
 # Build rule for subdir invocation for target.

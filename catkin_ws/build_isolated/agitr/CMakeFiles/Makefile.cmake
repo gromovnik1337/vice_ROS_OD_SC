@@ -181,6 +181,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/subpose.dir/DependInfo.cmake"
   "CMakeFiles/pubvel.dir/DependInfo.cmake"
   "CMakeFiles/hello.dir/DependInfo.cmake"
   "CMakeFiles/std_msgs_generate_messages_nodejs.dir/DependInfo.cmake"

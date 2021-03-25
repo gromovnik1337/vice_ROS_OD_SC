@@ -39,6 +39,7 @@
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/install/local.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/rebuild_cache.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/test.dir
+/home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/pubvel.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/list_install_components.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/roscpp_generate_messages_py.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/roscpp_generate_messages_eus.dir

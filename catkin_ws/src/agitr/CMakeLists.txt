@@ -22,7 +22,9 @@ include_directories(
 # are to be used.
 add_executable(hello ./src/hello.cpp)
 add_executable(pubvel ./src/pubvel.cpp)
+add_executable(subpose ./src/subpose.cpp)
 
 # Specify libraries aganist which to link. Again, this line is to be copied for each distinct executable in the package
 target_link_libraries(hello ${catkin_LIBRARIES})
 target_link_libraries(pubvel ${catkin_LIBRARIES})
+target_link_libraries(subpose ${catkin_LIBRARIES})

@@ -72,6 +72,7 @@ CMAKE_BINARY_DIR = /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/subpose.dir/all
 all: CMakeFiles/pubvel.dir/all
 all: CMakeFiles/hello.dir/all
 all: gtest/all
@@ -84,6 +85,7 @@ preinstall: gtest/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/subpose.dir/clean
 clean: CMakeFiles/pubvel.dir/clean
 clean: CMakeFiles/hello.dir/clean
 clean: CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
@@ -166,6 +168,33 @@ gtest/googlemock/gtest/clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/c
 gtest/googlemock/gtest/clean: gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 
 .PHONY : gtest/googlemock/gtest/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/subpose.dir
+
+# All Build rule for target.
+CMakeFiles/subpose.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/subpose.dir/build.make CMakeFiles/subpose.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/subpose.dir/build.make CMakeFiles/subpose.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles --progress-num=16,17 "Built target subpose"
+.PHONY : CMakeFiles/subpose.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/subpose.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/subpose.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build_isolated/agitr/CMakeFiles 0
+.PHONY : CMakeFiles/subpose.dir/rule
+
+# Convenience name for target.
+subpose: CMakeFiles/subpose.dir/rule
+
+.PHONY : subpose
+
+# clean rule for target.
+CMakeFiles/subpose.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/subpose.dir/build.make CMakeFiles/subpose.dir/clean
+.PHONY : CMakeFiles/subpose.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/pubvel.dir

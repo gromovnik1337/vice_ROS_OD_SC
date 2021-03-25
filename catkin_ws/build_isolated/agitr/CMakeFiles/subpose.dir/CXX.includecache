@@ -6,8 +6,16 @@
 
 #IncludeRegexTransform: 
 
-/home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/src/hello.cpp
+/home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/include/subpose.hpp
 ros/ros.h
+-
+turtlesim/Pose.h
+-
+iomanip
+-
+
+/home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/src/subpose.cpp
+subpose.hpp
 -
 
 /opt/ros/melodic/include/ros/advertise_options.h
@@ -218,6 +226,10 @@ boost/make_shared.hpp
 cstddef
 -
 memory
+-
+
+/opt/ros/melodic/include/ros/message_operations.h
+ostream
 -
 
 /opt/ros/melodic/include/ros/message_traits.h
@@ -651,6 +663,22 @@ ros/forwards.h
 /opt/ros/melodic/include/ros/ros/forwards.h
 
 /opt/ros/melodic/include/rosconsole/macros_generated.h
+
+/opt/ros/melodic/include/turtlesim/Pose.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
 
 /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 ros/macros.h

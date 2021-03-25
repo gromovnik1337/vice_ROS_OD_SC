@@ -1,5 +1,5 @@
-#ifndef ACQUISITION_HPP
-#define ACQUISITION_HPP
+#ifndef PUBVEL_hpp
+#define PUBVEL_hpp
 
 // Header with standard ROS classes
 #include <ros/ros.h>
@@ -17,13 +17,12 @@ private:
     // Declare a publisher object
     ros::Publisher _turtle_velocity_publish;
 
-    // Declare a message to publish turtle speed
-    geometry_msgs::Twist _msg;
-
 public:
     publishTurtle();
 
     ~publishTurtle();
+
+    void writeVelocity(geometry_msgs::Twist);
 
 }; 
 

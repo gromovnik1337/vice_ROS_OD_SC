@@ -6,8 +6,52 @@
 
 #IncludeRegexTransform: 
 
-/home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/src/hello.cpp
+/home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/include/pubvel.hpp
 ros/ros.h
+-
+geometry_msgs/Twist.h
+-
+stdlib.h
+-
+
+/home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/src/pubvel.cpp
+pubvel.hpp
+-
+
+/opt/ros/melodic/include/geometry_msgs/Twist.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+geometry_msgs/Vector3.h
+-
+geometry_msgs/Vector3.h
+-
+
+/opt/ros/melodic/include/geometry_msgs/Vector3.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
 -
 
 /opt/ros/melodic/include/ros/advertise_options.h
@@ -218,6 +262,10 @@ boost/make_shared.hpp
 cstddef
 -
 memory
+-
+
+/opt/ros/melodic/include/ros/message_operations.h
+ostream
 -
 
 /opt/ros/melodic/include/ros/message_traits.h

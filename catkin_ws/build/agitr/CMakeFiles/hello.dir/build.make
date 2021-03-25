@@ -76,27 +76,27 @@ include agitr/CMakeFiles/hello.dir/progress.make
 # Include the compile flags for this target's objects.
 include agitr/CMakeFiles/hello.dir/flags.make
 
-agitr/CMakeFiles/hello.dir/hello.cpp.o: agitr/CMakeFiles/hello.dir/flags.make
-agitr/CMakeFiles/hello.dir/hello.cpp.o: /home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/hello.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object agitr/CMakeFiles/hello.dir/hello.cpp.o"
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/hello.cpp.o -c /home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/hello.cpp
+agitr/CMakeFiles/hello.dir/src/hello.cpp.o: agitr/CMakeFiles/hello.dir/flags.make
+agitr/CMakeFiles/hello.dir/src/hello.cpp.o: /home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/src/hello.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object agitr/CMakeFiles/hello.dir/src/hello.cpp.o"
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/hello.dir/src/hello.cpp.o -c /home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/src/hello.cpp
 
-agitr/CMakeFiles/hello.dir/hello.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/hello.cpp.i"
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/hello.cpp > CMakeFiles/hello.dir/hello.cpp.i
+agitr/CMakeFiles/hello.dir/src/hello.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/hello.dir/src/hello.cpp.i"
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/src/hello.cpp > CMakeFiles/hello.dir/src/hello.cpp.i
 
-agitr/CMakeFiles/hello.dir/hello.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/hello.cpp.s"
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/hello.cpp -o CMakeFiles/hello.dir/hello.cpp.s
+agitr/CMakeFiles/hello.dir/src/hello.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/hello.dir/src/hello.cpp.s"
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxc/vice_ROS_OD_SC/catkin_ws/src/agitr/src/hello.cpp -o CMakeFiles/hello.dir/src/hello.cpp.s
 
 # Object files for target hello
 hello_OBJECTS = \
-"CMakeFiles/hello.dir/hello.cpp.o"
+"CMakeFiles/hello.dir/src/hello.cpp.o"
 
 # External object files for target hello
 hello_EXTERNAL_OBJECTS =
 
-/home/luxc/vice_ROS_OD_SC/catkin_ws/devel/lib/agitr/hello: agitr/CMakeFiles/hello.dir/hello.cpp.o
+/home/luxc/vice_ROS_OD_SC/catkin_ws/devel/lib/agitr/hello: agitr/CMakeFiles/hello.dir/src/hello.cpp.o
 /home/luxc/vice_ROS_OD_SC/catkin_ws/devel/lib/agitr/hello: agitr/CMakeFiles/hello.dir/build.make
 /home/luxc/vice_ROS_OD_SC/catkin_ws/devel/lib/agitr/hello: /opt/ros/melodic/lib/libroscpp.so
 /home/luxc/vice_ROS_OD_SC/catkin_ws/devel/lib/agitr/hello: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so

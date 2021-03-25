@@ -187,6 +187,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+agitr/CMakeFiles/pubvel.dir/rule:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/pubvel.dir/rule
+.PHONY : agitr/CMakeFiles/pubvel.dir/rule
+
+# Convenience name for target.
+pubvel: agitr/CMakeFiles/pubvel.dir/rule
+
+.PHONY : pubvel
+
+# fast build rule for target.
+pubvel/fast:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/build
+.PHONY : pubvel/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/roscpp_generate_messages_py.dir/rule:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/roscpp_generate_messages_py.dir/rule
 .PHONY : agitr/CMakeFiles/roscpp_generate_messages_py.dir/rule
@@ -426,32 +441,59 @@ std_msgs_generate_messages_py/fast:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/std_msgs_generate_messages_py.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_py.dir/build
 .PHONY : std_msgs_generate_messages_py/fast
 
-hello.o: hello.cpp.o
+src/hello.o: src/hello.cpp.o
 
-.PHONY : hello.o
+.PHONY : src/hello.o
 
 # target to build an object file
-hello.cpp.o:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/hello.cpp.o
-.PHONY : hello.cpp.o
+src/hello.cpp.o:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/src/hello.cpp.o
+.PHONY : src/hello.cpp.o
 
-hello.i: hello.cpp.i
+src/hello.i: src/hello.cpp.i
 
-.PHONY : hello.i
+.PHONY : src/hello.i
 
 # target to preprocess a source file
-hello.cpp.i:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/hello.cpp.i
-.PHONY : hello.cpp.i
+src/hello.cpp.i:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/src/hello.cpp.i
+.PHONY : src/hello.cpp.i
 
-hello.s: hello.cpp.s
+src/hello.s: src/hello.cpp.s
 
-.PHONY : hello.s
+.PHONY : src/hello.s
 
 # target to generate assembly for a file
-hello.cpp.s:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/hello.cpp.s
-.PHONY : hello.cpp.s
+src/hello.cpp.s:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/hello.dir/build.make agitr/CMakeFiles/hello.dir/src/hello.cpp.s
+.PHONY : src/hello.cpp.s
+
+src/pubvel.o: src/pubvel.cpp.o
+
+.PHONY : src/pubvel.o
+
+# target to build an object file
+src/pubvel.cpp.o:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/src/pubvel.cpp.o
+.PHONY : src/pubvel.cpp.o
+
+src/pubvel.i: src/pubvel.cpp.i
+
+.PHONY : src/pubvel.i
+
+# target to preprocess a source file
+src/pubvel.cpp.i:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/src/pubvel.cpp.i
+.PHONY : src/pubvel.cpp.i
+
+src/pubvel.s: src/pubvel.cpp.s
+
+.PHONY : src/pubvel.s
+
+# target to generate assembly for a file
+src/pubvel.cpp.s:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/src/pubvel.cpp.s
+.PHONY : src/pubvel.cpp.s
 
 # Help Target
 help:
@@ -482,9 +524,13 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... hello"
-	@echo "... hello.o"
-	@echo "... hello.i"
-	@echo "... hello.s"
+	@echo "... pubvel"
+	@echo "... src/hello.o"
+	@echo "... src/hello.i"
+	@echo "... src/hello.s"
+	@echo "... src/pubvel.o"
+	@echo "... src/pubvel.i"
+	@echo "... src/pubvel.s"
 .PHONY : help
 
 

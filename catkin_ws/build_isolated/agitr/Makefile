@@ -187,6 +187,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named subpose
+
+# Build rule for target.
+subpose: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 subpose
+.PHONY : subpose
+
+# fast build rule for target.
+subpose/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/subpose.dir/build.make CMakeFiles/subpose.dir/build
+.PHONY : subpose/fast
+
+#=============================================================================
 # Target rules for targets named pubvel
 
 # Build rule for target.
@@ -578,6 +591,33 @@ src/pubvel.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pubvel.dir/build.make CMakeFiles/pubvel.dir/src/pubvel.cpp.s
 .PHONY : src/pubvel.cpp.s
 
+src/subpose.o: src/subpose.cpp.o
+
+.PHONY : src/subpose.o
+
+# target to build an object file
+src/subpose.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/subpose.dir/build.make CMakeFiles/subpose.dir/src/subpose.cpp.o
+.PHONY : src/subpose.cpp.o
+
+src/subpose.i: src/subpose.cpp.i
+
+.PHONY : src/subpose.i
+
+# target to preprocess a source file
+src/subpose.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/subpose.dir/build.make CMakeFiles/subpose.dir/src/subpose.cpp.i
+.PHONY : src/subpose.cpp.i
+
+src/subpose.s: src/subpose.cpp.s
+
+.PHONY : src/subpose.s
+
+# target to generate assembly for a file
+src/subpose.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/subpose.dir/build.make CMakeFiles/subpose.dir/src/subpose.cpp.s
+.PHONY : src/subpose.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -617,12 +657,16 @@ help:
 	@echo "... gtest_main"
 	@echo "... hello"
 	@echo "... pubvel"
+	@echo "... subpose"
 	@echo "... src/hello.o"
 	@echo "... src/hello.i"
 	@echo "... src/hello.s"
 	@echo "... src/pubvel.o"
 	@echo "... src/pubvel.i"
 	@echo "... src/pubvel.s"
+	@echo "... src/subpose.o"
+	@echo "... src/subpose.i"
+	@echo "... src/subpose.s"
 .PHONY : help
 
 
