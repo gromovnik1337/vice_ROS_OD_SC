@@ -1,8 +1,0 @@
-prefix=/home/luxc/vice_ROS_OD_SC/catkin_ws/install
-
-Name: acquisition
-Description: Description of acquisition
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

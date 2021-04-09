@@ -7,11 +7,24 @@
 #include <sensor_msgs/PointCloud2.h>
 // PCL
 #include <pcl/point_cloud.h>
-#include <pcl_conversions/pcl_conversions.h> 
+#include <pcl_conversions/pcl_conversions.h>
+#include <pcl/visualization/pcl_visualizer.h> 
 
+class customVisualizer
+{
+private:
+    // Pointer to the visualizer
+    pcl::visualization::PCLVisualizer* _v;
 
+public:
+    customVisualizer(std::string label);
+    ~customVisualizer();
 
-class acquisition
+    void addPointCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, std::string label);
+
+};
+
+class getAndView
 {
 private:
     // Create necessary ROS objects
@@ -20,10 +33,12 @@ private:
     // Create a subscriber
     ros::Subscriber _cloud_subscriber;
 
-public:
-    acquisition();
+    customVisualizer *visualizeIt;
 
-    ~acquisition();
+public:
+    getAndView();
+
+    ~getAndView();
 
     void topicCallBack(const sensor_msgs::PointCloud2::ConstPtr& msg);
 

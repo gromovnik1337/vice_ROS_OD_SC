@@ -5,6 +5,6 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
-subdirs("acquisition")
 subdirs("agitr")
+subdirs("data_pre_processing")
 subdirs("loam_livox")

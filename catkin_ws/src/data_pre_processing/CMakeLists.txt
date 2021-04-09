@@ -9,7 +9,13 @@ find_package(catkin REQUIRED COMPONENTS roscpp)
 find_package(PCL 1.8 REQUIRED)
 
 # Declare the catkin package
-catkin_package()
+catkin_package(
+    INCLUDE_DIRS
+     ${PROJECT_SOURCE_DIR}/include
+     ${PROJECT_SOURCE_DIR}/src
+    DEPENDS
+     PCL
+)
 
 # Specify the location of header files
 include_directories(
@@ -19,6 +25,9 @@ include_directories(
     ${PROJECT_SOURCE_DIR}/src
 )
 
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
+
 # Declare the executable, along with its source files. For multiple executables multiple copies of this line 
 # are to be used.
 add_executable(acquire ./src/acquisition.cpp)
@@ -26,3 +35,4 @@ add_executable(pcl_view_lidar ./src/pcl_view_lidar.cpp)
 
 # Specify libraries aganist which to link. Again, this line is to be copied for each distinct executable in the package
 target_link_libraries(acquire ${catkin_LIBRARIES})
+target_link_libraries(pcl_view_lidar ${catkin_LIBRARIES} ${PCL_LIBRARIES})

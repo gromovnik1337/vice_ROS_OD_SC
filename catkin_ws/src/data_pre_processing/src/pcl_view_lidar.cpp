@@ -3,38 +3,61 @@
 
 #include <pcl_view_lidar.hpp>
 
-// Constructor of the acquisition class
-acquisition::acquisition()
+getAndView::getAndView()
 {
 
-    _cloud_subscriber = _node_handle.subscribe<sensor_msgs::PointCloud2>("/livox/lidar", 1, &acquisition::topicCallBack, this);
+    _cloud_subscriber = _node_handle.subscribe<sensor_msgs::PointCloud2>("/livox/lidar", 1, &getAndView::topicCallBack, this);
+    visualizeIt =  new customVisualizer("visualizer");
+    
 }
 
-// Deconstructor of the acquisition class
-acquisition::~acquisition()
+getAndView::~getAndView()
 {
 }
 
-void acquisition::topicCallBack(const sensor_msgs::PointCloud2::ConstPtr& msg)
+
+
+void getAndView::topicCallBack(const sensor_msgs::PointCloud2::ConstPtr& msg)
 {
    
     // Transform the message to a pcl::PCLPointCloud2
     pcl::PCLPointCloud2 pointCloud2;
     pcl_conversions::toPCL(*msg, pointCloud2);
+    
+    // Converto to plc cloud
+    visualizeIt->addPointCloud();
+
 
     ROS_INFO_STREAM("Data acquired");
 }
 
+customVisualizer::customVisualizer(std::string label) : _v(new pcl::visualization::PCLVisualizer(label))
+{
+
+}
+customVisualizer::~customVisualizer()
+{
+
+}
+
+void customVisualizer::addPointCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud, std::string label)
+{
+  _v->addPointCloud<pcl::PointXYZ>(cloud, label);
+  _v->spin();
+
+}
+
 int main(int argc, char **argv) {
 
-    ros::init(argc, argv, "acquisition");
+    ros::init(argc, argv, "pcl_view_lidar");
     ros::Time::init();
 
     // Announce the start of the process
     ROS_INFO_STREAM("Data acquisition initiated!");
 
     // Initialize
-    acquisition acquireBasic;
+    getAndView getAndViewBasic;
+    
 
     ros::spin();
 
