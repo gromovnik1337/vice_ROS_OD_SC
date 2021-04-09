@@ -1,2 +1,0 @@
-acquisition:agitr:loam_livox
--G Unix Makefiles -DCATKIN_DEVEL_PREFIX=/home/luxc/vice_ROS_OD_SC/catkin_ws/devel_isolated -DCMAKE_INSTALL_PREFIX=/home/luxc/vice_ROS_OD_SC/catkin_ws/install_isolated

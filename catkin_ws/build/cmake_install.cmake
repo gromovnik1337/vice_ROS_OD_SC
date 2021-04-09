@@ -136,8 +136,8 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/luxc/vice_ROS_OD_SC/catkin_ws/build/gtest/cmake_install.cmake")
-  include("/home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/cmake_install.cmake")
   include("/home/luxc/vice_ROS_OD_SC/catkin_ws/build/acquisition/cmake_install.cmake")
+  include("/home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/cmake_install.cmake")
   include("/home/luxc/vice_ROS_OD_SC/catkin_ws/build/loam_livox/cmake_install.cmake")
 
 endif()

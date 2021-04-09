@@ -87,17 +87,27 @@ install/strip/fast: preinstall/fast
 	/usr/local/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -110,27 +120,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -142,17 +131,28 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/local/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -202,111 +202,6 @@ pubvel/fast:
 .PHONY : pubvel/fast
 
 # Convenience name for target.
-agitr/CMakeFiles/roscpp_generate_messages_py.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/roscpp_generate_messages_py.dir/rule
-.PHONY : agitr/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: agitr/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# fast build rule for target.
-roscpp_generate_messages_py/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/roscpp_generate_messages_py.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_py.dir/build
-.PHONY : roscpp_generate_messages_py/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/roscpp_generate_messages_eus.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-.PHONY : agitr/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_eus: agitr/CMakeFiles/roscpp_generate_messages_eus.dir/rule
-
-.PHONY : roscpp_generate_messages_eus
-
-# fast build rule for target.
-roscpp_generate_messages_eus/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/roscpp_generate_messages_eus.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_eus.dir/build
-.PHONY : roscpp_generate_messages_eus/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-.PHONY : agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# fast build rule for target.
-roscpp_generate_messages_lisp/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-.PHONY : roscpp_generate_messages_lisp/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-.PHONY : agitr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: agitr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_cpp
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_cpp/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make agitr/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# fast build rule for target.
-std_msgs_generate_messages_lisp/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-.PHONY : std_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : agitr/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: agitr/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-.PHONY : agitr/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_eus: agitr/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_eus
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_eus/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make agitr/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-.PHONY : rosgraph_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
 agitr/CMakeFiles/hello.dir/rule:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/hello.dir/rule
 .PHONY : agitr/CMakeFiles/hello.dir/rule
@@ -322,124 +217,34 @@ hello/fast:
 .PHONY : hello/fast
 
 # Convenience name for target.
-agitr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
-.PHONY : agitr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+agitr/CMakeFiles/reverse_cmd_vel.dir/rule:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/reverse_cmd_vel.dir/rule
+.PHONY : agitr/CMakeFiles/reverse_cmd_vel.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: agitr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+reverse_cmd_vel: agitr/CMakeFiles/reverse_cmd_vel.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_lisp
+.PHONY : reverse_cmd_vel
 
 # fast build rule for target.
-rosgraph_msgs_generate_messages_lisp/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make agitr/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-.PHONY : rosgraph_msgs_generate_messages_lisp/fast
+reverse_cmd_vel/fast:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/build
+.PHONY : reverse_cmd_vel/fast
 
 # Convenience name for target.
-agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+agitr/CMakeFiles/subpose.dir/rule:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/subpose.dir/rule
+.PHONY : agitr/CMakeFiles/subpose.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_cpp: agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+subpose: agitr/CMakeFiles/subpose.dir/rule
 
-.PHONY : std_msgs_generate_messages_cpp
+.PHONY : subpose
 
 # fast build rule for target.
-std_msgs_generate_messages_cpp/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-.PHONY : std_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-.PHONY : agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_nodejs/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make agitr/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-.PHONY : rosgraph_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-.PHONY : agitr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: agitr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# fast build rule for target.
-rosgraph_msgs_generate_messages_py/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make agitr/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-.PHONY : rosgraph_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: agitr/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# fast build rule for target.
-std_msgs_generate_messages_eus/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-.PHONY : std_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_nodejs: agitr/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : std_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-std_msgs_generate_messages_nodejs/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
-.PHONY : std_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-.PHONY : agitr/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: agitr/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# fast build rule for target.
-roscpp_generate_messages_nodejs/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make agitr/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-.PHONY : roscpp_generate_messages_nodejs/fast
-
-# Convenience name for target.
-agitr/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-.PHONY : agitr/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: agitr/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# fast build rule for target.
-std_msgs_generate_messages_py/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/std_msgs_generate_messages_py.dir/build.make agitr/CMakeFiles/std_msgs_generate_messages_py.dir/build
-.PHONY : std_msgs_generate_messages_py/fast
+subpose/fast:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/subpose.dir/build.make agitr/CMakeFiles/subpose.dir/build
+.PHONY : subpose/fast
 
 src/hello.o: src/hello.cpp.o
 
@@ -495,6 +300,60 @@ src/pubvel.cpp.s:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/src/pubvel.cpp.s
 .PHONY : src/pubvel.cpp.s
 
+src/reverse_cmd_vel.o: src/reverse_cmd_vel.cpp.o
+
+.PHONY : src/reverse_cmd_vel.o
+
+# target to build an object file
+src/reverse_cmd_vel.cpp.o:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/src/reverse_cmd_vel.cpp.o
+.PHONY : src/reverse_cmd_vel.cpp.o
+
+src/reverse_cmd_vel.i: src/reverse_cmd_vel.cpp.i
+
+.PHONY : src/reverse_cmd_vel.i
+
+# target to preprocess a source file
+src/reverse_cmd_vel.cpp.i:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/src/reverse_cmd_vel.cpp.i
+.PHONY : src/reverse_cmd_vel.cpp.i
+
+src/reverse_cmd_vel.s: src/reverse_cmd_vel.cpp.s
+
+.PHONY : src/reverse_cmd_vel.s
+
+# target to generate assembly for a file
+src/reverse_cmd_vel.cpp.s:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/src/reverse_cmd_vel.cpp.s
+.PHONY : src/reverse_cmd_vel.cpp.s
+
+src/subpose.o: src/subpose.cpp.o
+
+.PHONY : src/subpose.o
+
+# target to build an object file
+src/subpose.cpp.o:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/subpose.dir/build.make agitr/CMakeFiles/subpose.dir/src/subpose.cpp.o
+.PHONY : src/subpose.cpp.o
+
+src/subpose.i: src/subpose.cpp.i
+
+.PHONY : src/subpose.i
+
+# target to preprocess a source file
+src/subpose.cpp.i:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/subpose.dir/build.make agitr/CMakeFiles/subpose.dir/src/subpose.cpp.i
+.PHONY : src/subpose.cpp.i
+
+src/subpose.s: src/subpose.cpp.s
+
+.PHONY : src/subpose.s
+
+# target to generate assembly for a file
+src/subpose.cpp.s:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/subpose.dir/build.make agitr/CMakeFiles/subpose.dir/src/subpose.cpp.s
+.PHONY : src/subpose.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -508,29 +367,22 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... roscpp_generate_messages_eus"
-	@echo "... roscpp_generate_messages_lisp"
-	@echo "... roscpp_generate_messages_nodejs"
-	@echo "... roscpp_generate_messages_py"
-	@echo "... rosgraph_msgs_generate_messages_cpp"
-	@echo "... rosgraph_msgs_generate_messages_eus"
-	@echo "... rosgraph_msgs_generate_messages_lisp"
-	@echo "... rosgraph_msgs_generate_messages_nodejs"
-	@echo "... rosgraph_msgs_generate_messages_py"
-	@echo "... std_msgs_generate_messages_cpp"
-	@echo "... std_msgs_generate_messages_eus"
-	@echo "... std_msgs_generate_messages_lisp"
-	@echo "... std_msgs_generate_messages_nodejs"
-	@echo "... std_msgs_generate_messages_py"
 	@echo "... hello"
 	@echo "... pubvel"
+	@echo "... reverse_cmd_vel"
+	@echo "... subpose"
 	@echo "... src/hello.o"
 	@echo "... src/hello.i"
 	@echo "... src/hello.s"
 	@echo "... src/pubvel.o"
 	@echo "... src/pubvel.i"
 	@echo "... src/pubvel.s"
+	@echo "... src/reverse_cmd_vel.o"
+	@echo "... src/reverse_cmd_vel.i"
+	@echo "... src/reverse_cmd_vel.s"
+	@echo "... src/subpose.o"
+	@echo "... src/subpose.i"
+	@echo "... src/subpose.s"
 .PHONY : help
 
 

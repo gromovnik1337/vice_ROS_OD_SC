@@ -19,10 +19,8 @@ publishTurtle::~publishTurtle()
 
 }
 
-// Body of a publisher function
-
+// Body of a function that call the publish method and writes out the output
 void publishTurtle::writeVelocity(geometry_msgs::Twist msg)
-
 {
     // Publish the message
     _turtle_velocity_publish.publish(msg);
@@ -32,7 +30,6 @@ void publishTurtle::writeVelocity(geometry_msgs::Twist msg)
     << "linear=" << msg.linear.x
     << "angular=" << msg.angular.z);
 }
-
 
 int main(int argc, char **argv) 
 {
