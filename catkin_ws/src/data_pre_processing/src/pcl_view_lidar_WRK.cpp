@@ -3,31 +3,37 @@
 
 #include <pcl_view_lidar.hpp>
 
+customVisualizer::customVisualizer(std::string label) : _v(new pcl::visualization::PCLVisualizer(label))
+{
+    //_v (new pcl::visualization::PCLVisualizer(label));
+}
+
+customVisualizer::~customVisualizer()
+{
+}
+
+/*
+void customVisualizer::addPointCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud)
+{
+  _v->addPointCloud<pcl::PointXYZ>(cloud);
+  _v->spin();
+
+}
+
+*/
 
 getAndView::getAndView()
 {
 
-    _cloud_subscriber = _node_handle.subscribe<sensor_msgs::PointCloud2>("/livox/lidar", 1, &getAndView::lidarRawDataCallback, this);  
-
+    visualizeIt =  customVisualizer("visualizer");
+    _cloud_subscriber = _node_handle.subscribe<sensor_msgs::PointCloud2>("/livox/lidar", 1, &getAndView::lidarRawDataCallback, this);
+    
 }
 
 getAndView::~getAndView()
 {
 }
 
- pcl::visualization::PCLVisualizer::Ptr simpleVis (pcl::PointCloud<pcl::PointXYZ>::ConstPtr cloud)
-{
-
-    pcl::visualization::PCLVisualizer::Ptr _v (new pcl::visualization::PCLVisualizer("Viewer"));
-    _v->setBackgroundColor (0, 0, 0);
-    _v->addPointCloud<pcl::PointXYZ>(cloud, "sample cloud");
-    _v->addCoordinateSystem (1.0);
-    //_v->initCameraParameters ();
-    _v->spin();
-    //_v->spinOnce (100);
-    return (_v);
-    
-}
 
 void getAndView::lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& msg)
 {
@@ -39,11 +45,10 @@ void getAndView::lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& 
 
     ROS_INFO_STREAM("Data acquired");
     
-    // Conver to plc cloud
+    // Converto to plc cloud
     pcl::fromPCLPointCloud2(pointCloud2, *cloud_out);
 
-    pcl::visualization::PCLVisualizer::Ptr viewer;
-    viewer = simpleVis(cloud_out);
+    visualizeIt->addPointCloud<pcl::PointCloudXYZ>(*cloud_out, "sample cloud");
     
 }
 

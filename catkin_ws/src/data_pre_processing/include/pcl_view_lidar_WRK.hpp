@@ -11,6 +11,20 @@
 #include <pcl/visualization/pcl_visualizer.h> 
 
 
+class customVisualizer
+{
+private:
+    // Smart pointer to the visualizer
+    pcl::visualization::PCLVisualizer::Ptr _v;
+
+public:
+    customVisualizer(std::string label);
+    ~customVisualizer();
+
+    //void addPointCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud);
+
+};
+
 class getAndView
 {
 private:
@@ -20,12 +34,15 @@ private:
     // Create a subscriber
     ros::Subscriber _cloud_subscriber;
 
+    customVisualizer visualizeIt;
+
 public:
     getAndView();
 
     ~getAndView();
 
     void lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& msg);
+
 };
 
 #endif 
