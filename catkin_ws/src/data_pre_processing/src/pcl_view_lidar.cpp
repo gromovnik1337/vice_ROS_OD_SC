@@ -15,7 +15,7 @@ getAndView::~getAndView()
 {
 }
 
- pcl::visualization::PCLVisualizer::Ptr simpleVis (pcl::PointCloud<pcl::PointXYZ>::ConstPtr cloud)
+pcl::visualization::PCLVisualizer::Ptr simpleVis (pcl::PointCloud<pcl::PointXYZ>::ConstPtr cloud)
 {
 
     pcl::visualization::PCLVisualizer::Ptr _v (new pcl::visualization::PCLVisualizer("Viewer"));
@@ -42,7 +42,7 @@ void getAndView::lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& 
     // Conver to plc cloud
     pcl::fromPCLPointCloud2(pointCloud2, *cloud_out);
 
-    pcl::visualization::PCLVisualizer::Ptr viewer;
+    //pcl::visualization::PCLVisualizer::Ptr viewer;
     viewer = simpleVis(cloud_out);
     
 }
@@ -58,7 +58,6 @@ int main(int argc, char **argv) {
 
     // Initialize
     getAndView getAndViewBasic;
-    
 
     ros::spin();
 
