@@ -304,6 +304,32 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named pubvel_with_max
+
+# Build rule for target.
+pubvel_with_max: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pubvel_with_max
+.PHONY : pubvel_with_max
+
+# fast build rule for target.
+pubvel_with_max/fast:
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/build
+.PHONY : pubvel_with_max/fast
+
+#=============================================================================
+# Target rules for targets named set_bg_color
+
+# Build rule for target.
+set_bg_color: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 set_bg_color
+.PHONY : set_bg_color
+
+# fast build rule for target.
+set_bg_color/fast:
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/build
+.PHONY : set_bg_color/fast
+
+#=============================================================================
 # Target rules for targets named reverse_cmd_vel
 
 # Build rule for target.
@@ -551,17 +577,17 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named pcl_view_lidar
+# Target rules for targets named pcl_lidar_screenshot
 
 # Build rule for target.
-pcl_view_lidar: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pcl_view_lidar
-.PHONY : pcl_view_lidar
+pcl_lidar_screenshot: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pcl_lidar_screenshot
+.PHONY : pcl_lidar_screenshot
 
 # fast build rule for target.
-pcl_view_lidar/fast:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build
-.PHONY : pcl_view_lidar/fast
+pcl_lidar_screenshot/fast:
+	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build
+.PHONY : pcl_lidar_screenshot/fast
 
 #=============================================================================
 # Target rules for targets named acquire
@@ -575,6 +601,19 @@ acquire: cmake_check_build_system
 acquire/fast:
 	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/acquire.dir/build.make data_pre_processing/CMakeFiles/acquire.dir/build
 .PHONY : acquire/fast
+
+#=============================================================================
+# Target rules for targets named pcl_view_lidar
+
+# Build rule for target.
+pcl_view_lidar: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pcl_view_lidar
+.PHONY : pcl_view_lidar
+
+# fast build rule for target.
+pcl_view_lidar/fast:
+	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build
+.PHONY : pcl_view_lidar/fast
 
 #=============================================================================
 # Target rules for targets named read_camera
@@ -1286,10 +1325,13 @@ help:
 	@echo "... hello"
 	@echo "... livox_laserMapping"
 	@echo "... livox_scanRegistration"
+	@echo "... pcl_lidar_screenshot"
 	@echo "... pcl_view_lidar"
 	@echo "... pubvel"
+	@echo "... pubvel_with_max"
 	@echo "... read_camera"
 	@echo "... reverse_cmd_vel"
+	@echo "... set_bg_color"
 	@echo "... subpose"
 .PHONY : help
 

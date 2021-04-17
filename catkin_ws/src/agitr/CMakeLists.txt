@@ -24,9 +24,14 @@ add_executable(hello ./src/hello.cpp)
 add_executable(pubvel ./src/pubvel.cpp)
 add_executable(subpose ./src/subpose.cpp)
 add_executable(reverse_cmd_vel ./src/reverse_cmd_vel.cpp)
+add_executable(set_bg_color ./src/set_bg_color.cpp)
+add_executable(pubvel_with_max ./src/pubvel_with_max.cpp)
 
 # Specify libraries aganist which to link. Again, this line is to be copied for each distinct executable in the package
 target_link_libraries(hello ${catkin_LIBRARIES})
 target_link_libraries(pubvel ${catkin_LIBRARIES})
 target_link_libraries(subpose ${catkin_LIBRARIES})
 target_link_libraries(reverse_cmd_vel ${catkin_LIBRARIES})
+target_link_libraries(set_bg_color ${catkin_LIBRARIES})
+target_link_libraries(pubvel_with_max ${catkin_LIBRARIES})
+

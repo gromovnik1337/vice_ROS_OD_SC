@@ -187,6 +187,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+agitr/CMakeFiles/pubvel_with_max.dir/rule:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/pubvel_with_max.dir/rule
+.PHONY : agitr/CMakeFiles/pubvel_with_max.dir/rule
+
+# Convenience name for target.
+pubvel_with_max: agitr/CMakeFiles/pubvel_with_max.dir/rule
+
+.PHONY : pubvel_with_max
+
+# fast build rule for target.
+pubvel_with_max/fast:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/build
+.PHONY : pubvel_with_max/fast
+
+# Convenience name for target.
+agitr/CMakeFiles/set_bg_color.dir/rule:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/set_bg_color.dir/rule
+.PHONY : agitr/CMakeFiles/set_bg_color.dir/rule
+
+# Convenience name for target.
+set_bg_color: agitr/CMakeFiles/set_bg_color.dir/rule
+
+.PHONY : set_bg_color
+
+# fast build rule for target.
+set_bg_color/fast:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/build
+.PHONY : set_bg_color/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/reverse_cmd_vel.dir/rule:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/reverse_cmd_vel.dir/rule
 .PHONY : agitr/CMakeFiles/reverse_cmd_vel.dir/rule
@@ -525,6 +555,33 @@ src/pubvel.cpp.s:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/src/pubvel.cpp.s
 .PHONY : src/pubvel.cpp.s
 
+src/pubvel_with_max.o: src/pubvel_with_max.cpp.o
+
+.PHONY : src/pubvel_with_max.o
+
+# target to build an object file
+src/pubvel_with_max.cpp.o:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/src/pubvel_with_max.cpp.o
+.PHONY : src/pubvel_with_max.cpp.o
+
+src/pubvel_with_max.i: src/pubvel_with_max.cpp.i
+
+.PHONY : src/pubvel_with_max.i
+
+# target to preprocess a source file
+src/pubvel_with_max.cpp.i:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/src/pubvel_with_max.cpp.i
+.PHONY : src/pubvel_with_max.cpp.i
+
+src/pubvel_with_max.s: src/pubvel_with_max.cpp.s
+
+.PHONY : src/pubvel_with_max.s
+
+# target to generate assembly for a file
+src/pubvel_with_max.cpp.s:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/src/pubvel_with_max.cpp.s
+.PHONY : src/pubvel_with_max.cpp.s
+
 src/reverse_cmd_vel.o: src/reverse_cmd_vel.cpp.o
 
 .PHONY : src/reverse_cmd_vel.o
@@ -551,6 +608,33 @@ src/reverse_cmd_vel.s: src/reverse_cmd_vel.cpp.s
 src/reverse_cmd_vel.cpp.s:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/src/reverse_cmd_vel.cpp.s
 .PHONY : src/reverse_cmd_vel.cpp.s
+
+src/set_bg_color.o: src/set_bg_color.cpp.o
+
+.PHONY : src/set_bg_color.o
+
+# target to build an object file
+src/set_bg_color.cpp.o:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/src/set_bg_color.cpp.o
+.PHONY : src/set_bg_color.cpp.o
+
+src/set_bg_color.i: src/set_bg_color.cpp.i
+
+.PHONY : src/set_bg_color.i
+
+# target to preprocess a source file
+src/set_bg_color.cpp.i:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/src/set_bg_color.cpp.i
+.PHONY : src/set_bg_color.cpp.i
+
+src/set_bg_color.s: src/set_bg_color.cpp.s
+
+.PHONY : src/set_bg_color.s
+
+# target to generate assembly for a file
+src/set_bg_color.cpp.s:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/src/set_bg_color.cpp.s
+.PHONY : src/set_bg_color.cpp.s
 
 src/subpose.o: src/subpose.cpp.o
 
@@ -609,7 +693,9 @@ help:
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... hello"
 	@echo "... pubvel"
+	@echo "... pubvel_with_max"
 	@echo "... reverse_cmd_vel"
+	@echo "... set_bg_color"
 	@echo "... subpose"
 	@echo "... src/hello.o"
 	@echo "... src/hello.i"
@@ -617,9 +703,15 @@ help:
 	@echo "... src/pubvel.o"
 	@echo "... src/pubvel.i"
 	@echo "... src/pubvel.s"
+	@echo "... src/pubvel_with_max.o"
+	@echo "... src/pubvel_with_max.i"
+	@echo "... src/pubvel_with_max.s"
 	@echo "... src/reverse_cmd_vel.o"
 	@echo "... src/reverse_cmd_vel.i"
 	@echo "... src/reverse_cmd_vel.s"
+	@echo "... src/set_bg_color.o"
+	@echo "... src/set_bg_color.i"
+	@echo "... src/set_bg_color.s"
 	@echo "... src/subpose.o"
 	@echo "... src/subpose.i"
 	@echo "... src/subpose.s"

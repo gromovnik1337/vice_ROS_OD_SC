@@ -2,6 +2,10 @@
 #define PCL_VIEW_HPP
 
 // Include necessary libraries
+#include <boost/circular_buffer.hpp>
+#include <thread>
+#include <chrono>
+
 //ROS
 #include <ros/ros.h>
 #include <sensor_msgs/PointCloud2.h>
@@ -20,12 +24,23 @@ private:
     // Create a subscriber
     ros::Subscriber _cloud_subscriber;
 
+    // Create a visualizer
+    pcl::visualization::PCLVisualizer::Ptr viewer;
+
+    // Circular buffer for Livox data
+    boost::circular_buffer<pcl::PCLPointCloud2> _livox_data_circular_buffer;
+
+    std::thread _data_processed_thread;
+
+private:
+    pcl::PointCloud<pcl::PointXYZ>::Ptr lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& msg);    
+
 public:
     getAndView();
 
     ~getAndView();
 
-    void lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& msg);
+    void simpleVis (pcl::visualization::PCLVisualizer::Ptr _v, pcl::PointCloud<pcl::PointXYZ>::ConstPtr cloud);
 };
 
 #endif 

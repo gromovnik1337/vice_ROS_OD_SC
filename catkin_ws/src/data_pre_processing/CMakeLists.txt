@@ -31,8 +31,10 @@ add_definitions(${PCL_DEFINITIONS})
 # Declare the executable, along with its source files. For multiple executables multiple copies of this line 
 # are to be used.
 add_executable(acquire ./src/acquisition.cpp)
+add_executable(pcl_lidar_screenshot ./src/pcl_view_lidar.cpp)
 add_executable(pcl_view_lidar ./src/pcl_view_lidar.cpp)
 
 # Specify libraries aganist which to link. Again, this line is to be copied for each distinct executable in the package
 target_link_libraries(acquire ${catkin_LIBRARIES})
+target_link_libraries(pcl_lidar_screenshot ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 target_link_libraries(pcl_view_lidar ${catkin_LIBRARIES} ${PCL_LIBRARIES})
