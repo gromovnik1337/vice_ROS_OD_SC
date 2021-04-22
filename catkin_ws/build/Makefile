@@ -577,17 +577,17 @@ std_msgs_generate_messages_py/fast:
 .PHONY : std_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named pcl_view_lidar
+# Target rules for targets named pcl_lidar_screenshot
 
 # Build rule for target.
-pcl_view_lidar: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pcl_view_lidar
-.PHONY : pcl_view_lidar
+pcl_lidar_screenshot: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pcl_lidar_screenshot
+.PHONY : pcl_lidar_screenshot
 
 # fast build rule for target.
-pcl_view_lidar/fast:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build
-.PHONY : pcl_view_lidar/fast
+pcl_lidar_screenshot/fast:
+	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build
+.PHONY : pcl_lidar_screenshot/fast
 
 #=============================================================================
 # Target rules for targets named acquire
@@ -603,17 +603,17 @@ acquire/fast:
 .PHONY : acquire/fast
 
 #=============================================================================
-# Target rules for targets named pcl_view_lidar_live
+# Target rules for targets named pcl_lidar_view
 
 # Build rule for target.
-pcl_view_lidar_live: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pcl_view_lidar_live
-.PHONY : pcl_view_lidar_live
+pcl_lidar_view: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pcl_lidar_view
+.PHONY : pcl_lidar_view
 
 # fast build rule for target.
-pcl_view_lidar_live/fast:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/build
-.PHONY : pcl_view_lidar_live/fast
+pcl_lidar_view/fast:
+	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build
+.PHONY : pcl_lidar_view/fast
 
 #=============================================================================
 # Target rules for targets named read_camera
@@ -1325,8 +1325,8 @@ help:
 	@echo "... hello"
 	@echo "... livox_laserMapping"
 	@echo "... livox_scanRegistration"
-	@echo "... pcl_view_lidar"
-	@echo "... pcl_view_lidar_live"
+	@echo "... pcl_lidar_screenshot"
+	@echo "... pcl_lidar_view"
 	@echo "... pubvel"
 	@echo "... pubvel_with_max"
 	@echo "... read_camera"
