@@ -76,27 +76,27 @@ include data_pre_processing/CMakeFiles/pcl_view_lidar.dir/progress.make
 # Include the compile flags for this target's objects.
 include data_pre_processing/CMakeFiles/pcl_view_lidar.dir/flags.make
 
-data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.o: data_pre_processing/CMakeFiles/pcl_view_lidar.dir/flags.make
-data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.o: /home/luxc/vice_ROS_OD_SC/catkin_ws/src/data_pre_processing/src/pcl_view_lidar.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.o"
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build/data_pre_processing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.o -c /home/luxc/vice_ROS_OD_SC/catkin_ws/src/data_pre_processing/src/pcl_view_lidar.cpp
+data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.o: data_pre_processing/CMakeFiles/pcl_view_lidar.dir/flags.make
+data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.o: /home/luxc/vice_ROS_OD_SC/catkin_ws/src/data_pre_processing/src/pcl_lidar_screenshot.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.o"
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build/data_pre_processing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.o -c /home/luxc/vice_ROS_OD_SC/catkin_ws/src/data_pre_processing/src/pcl_lidar_screenshot.cpp
 
-data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.i"
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build/data_pre_processing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxc/vice_ROS_OD_SC/catkin_ws/src/data_pre_processing/src/pcl_view_lidar.cpp > CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.i
+data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.i"
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build/data_pre_processing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/luxc/vice_ROS_OD_SC/catkin_ws/src/data_pre_processing/src/pcl_lidar_screenshot.cpp > CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.i
 
-data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.s"
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build/data_pre_processing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxc/vice_ROS_OD_SC/catkin_ws/src/data_pre_processing/src/pcl_view_lidar.cpp -o CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.s
+data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.s"
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build/data_pre_processing && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/luxc/vice_ROS_OD_SC/catkin_ws/src/data_pre_processing/src/pcl_lidar_screenshot.cpp -o CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.s
 
 # Object files for target pcl_view_lidar
 pcl_view_lidar_OBJECTS = \
-"CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.o"
+"CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.o"
 
 # External object files for target pcl_view_lidar
 pcl_view_lidar_EXTERNAL_OBJECTS =
 
-/home/luxc/vice_ROS_OD_SC/catkin_ws/devel/lib/data_pre_processing/pcl_view_lidar: data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.o
+/home/luxc/vice_ROS_OD_SC/catkin_ws/devel/lib/data_pre_processing/pcl_view_lidar: data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.o
 /home/luxc/vice_ROS_OD_SC/catkin_ws/devel/lib/data_pre_processing/pcl_view_lidar: data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build.make
 /home/luxc/vice_ROS_OD_SC/catkin_ws/devel/lib/data_pre_processing/pcl_view_lidar: /opt/ros/melodic/lib/libroscpp.so
 /home/luxc/vice_ROS_OD_SC/catkin_ws/devel/lib/data_pre_processing/pcl_view_lidar: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so

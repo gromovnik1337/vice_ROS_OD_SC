@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/luxc/vice_ROS_OD_SC/catkin_ws/src/data_pre_processing/src/pcl_view_lidar.cpp" "/home/luxc/vice_ROS_OD_SC/catkin_ws/build/data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.o"
+  "/home/luxc/vice_ROS_OD_SC/catkin_ws/src/data_pre_processing/src/pcl_lidar_screenshot.cpp" "/home/luxc/vice_ROS_OD_SC/catkin_ws/build/data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

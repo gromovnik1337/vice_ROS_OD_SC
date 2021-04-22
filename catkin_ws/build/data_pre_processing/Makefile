@@ -97,6 +97,29 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/local/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -119,29 +142,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/local/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -187,19 +187,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/rule
-.PHONY : data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/rule
+data_pre_processing/CMakeFiles/pcl_view_lidar.dir/rule:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_pre_processing/CMakeFiles/pcl_view_lidar.dir/rule
+.PHONY : data_pre_processing/CMakeFiles/pcl_view_lidar.dir/rule
 
 # Convenience name for target.
-pcl_lidar_screenshot: data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/rule
+pcl_view_lidar: data_pre_processing/CMakeFiles/pcl_view_lidar.dir/rule
 
-.PHONY : pcl_lidar_screenshot
+.PHONY : pcl_view_lidar
 
 # fast build rule for target.
-pcl_lidar_screenshot/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build
-.PHONY : pcl_lidar_screenshot/fast
+pcl_view_lidar/fast:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build
+.PHONY : pcl_view_lidar/fast
 
 # Convenience name for target.
 data_pre_processing/CMakeFiles/acquire.dir/rule:
@@ -217,19 +217,19 @@ acquire/fast:
 .PHONY : acquire/fast
 
 # Convenience name for target.
-data_pre_processing/CMakeFiles/pcl_view_lidar.dir/rule:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_pre_processing/CMakeFiles/pcl_view_lidar.dir/rule
-.PHONY : data_pre_processing/CMakeFiles/pcl_view_lidar.dir/rule
+data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/rule:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/rule
+.PHONY : data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/rule
 
 # Convenience name for target.
-pcl_view_lidar: data_pre_processing/CMakeFiles/pcl_view_lidar.dir/rule
+pcl_view_lidar_live: data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/rule
 
-.PHONY : pcl_view_lidar
+.PHONY : pcl_view_lidar_live
 
 # fast build rule for target.
-pcl_view_lidar/fast:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build
-.PHONY : pcl_view_lidar/fast
+pcl_view_lidar_live/fast:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/build
+.PHONY : pcl_view_lidar_live/fast
 
 src/acquisition.o: src/acquisition.cpp.o
 
@@ -258,35 +258,59 @@ src/acquisition.cpp.s:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/acquire.dir/build.make data_pre_processing/CMakeFiles/acquire.dir/src/acquisition.cpp.s
 .PHONY : src/acquisition.cpp.s
 
-src/pcl_view_lidar.o: src/pcl_view_lidar.cpp.o
+src/pcl_lidar_screenshot.o: src/pcl_lidar_screenshot.cpp.o
 
-.PHONY : src/pcl_view_lidar.o
+.PHONY : src/pcl_lidar_screenshot.o
 
 # target to build an object file
-src/pcl_view_lidar.cpp.o:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/src/pcl_view_lidar.cpp.o
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.o
-.PHONY : src/pcl_view_lidar.cpp.o
+src/pcl_lidar_screenshot.cpp.o:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.o
+.PHONY : src/pcl_lidar_screenshot.cpp.o
 
-src/pcl_view_lidar.i: src/pcl_view_lidar.cpp.i
+src/pcl_lidar_screenshot.i: src/pcl_lidar_screenshot.cpp.i
 
-.PHONY : src/pcl_view_lidar.i
+.PHONY : src/pcl_lidar_screenshot.i
 
 # target to preprocess a source file
-src/pcl_view_lidar.cpp.i:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/src/pcl_view_lidar.cpp.i
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.i
-.PHONY : src/pcl_view_lidar.cpp.i
+src/pcl_lidar_screenshot.cpp.i:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.i
+.PHONY : src/pcl_lidar_screenshot.cpp.i
 
-src/pcl_view_lidar.s: src/pcl_view_lidar.cpp.s
+src/pcl_lidar_screenshot.s: src/pcl_lidar_screenshot.cpp.s
 
-.PHONY : src/pcl_view_lidar.s
+.PHONY : src/pcl_lidar_screenshot.s
 
 # target to generate assembly for a file
-src/pcl_view_lidar.cpp.s:
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/src/pcl_view_lidar.cpp.s
-	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_view_lidar.cpp.s
-.PHONY : src/pcl_view_lidar.cpp.s
+src/pcl_lidar_screenshot.cpp.s:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar.dir/src/pcl_lidar_screenshot.cpp.s
+.PHONY : src/pcl_lidar_screenshot.cpp.s
+
+src/pcl_lidar_screenshot_copy.o: src/pcl_lidar_screenshot_copy.cpp.o
+
+.PHONY : src/pcl_lidar_screenshot_copy.o
+
+# target to build an object file
+src/pcl_lidar_screenshot_copy.cpp.o:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/src/pcl_lidar_screenshot_copy.cpp.o
+.PHONY : src/pcl_lidar_screenshot_copy.cpp.o
+
+src/pcl_lidar_screenshot_copy.i: src/pcl_lidar_screenshot_copy.cpp.i
+
+.PHONY : src/pcl_lidar_screenshot_copy.i
+
+# target to preprocess a source file
+src/pcl_lidar_screenshot_copy.cpp.i:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/src/pcl_lidar_screenshot_copy.cpp.i
+.PHONY : src/pcl_lidar_screenshot_copy.cpp.i
+
+src/pcl_lidar_screenshot_copy.s: src/pcl_lidar_screenshot_copy.cpp.s
+
+.PHONY : src/pcl_lidar_screenshot_copy.s
+
+# target to generate assembly for a file
+src/pcl_lidar_screenshot_copy.cpp.s:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/build.make data_pre_processing/CMakeFiles/pcl_view_lidar_live.dir/src/pcl_lidar_screenshot_copy.cpp.s
+.PHONY : src/pcl_lidar_screenshot_copy.cpp.s
 
 # Help Target
 help:
@@ -302,14 +326,17 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... acquire"
-	@echo "... pcl_lidar_screenshot"
 	@echo "... pcl_view_lidar"
+	@echo "... pcl_view_lidar_live"
 	@echo "... src/acquisition.o"
 	@echo "... src/acquisition.i"
 	@echo "... src/acquisition.s"
-	@echo "... src/pcl_view_lidar.o"
-	@echo "... src/pcl_view_lidar.i"
-	@echo "... src/pcl_view_lidar.s"
+	@echo "... src/pcl_lidar_screenshot.o"
+	@echo "... src/pcl_lidar_screenshot.i"
+	@echo "... src/pcl_lidar_screenshot.s"
+	@echo "... src/pcl_lidar_screenshot_copy.o"
+	@echo "... src/pcl_lidar_screenshot_copy.i"
+	@echo "... src/pcl_lidar_screenshot_copy.s"
 .PHONY : help
 
 
