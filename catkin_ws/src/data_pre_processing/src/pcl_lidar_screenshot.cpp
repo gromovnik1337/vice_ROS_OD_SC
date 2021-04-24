@@ -47,9 +47,6 @@ void getAndView::lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& 
     pcl::visualization::PCLVisualizer::Ptr viewer;
     viewer = simpleVis(cloud_out);
 
-
-    
-
 }
 
 

@@ -22,11 +22,12 @@ pcl::visualization::PCLVisualizer::Ptr simpleVis (pcl::PointCloud<pcl::PointXYZ>
 
 int main(int argc, char **argv) {
 
-    ros::init(argc, argv, "Range Image");
+    ros::init(argc, argv, "Range_image");
     ros::NodeHandle nh;
  
-    pcl::PointCloud<pcl::PointXYZ> point_cloud_lidar;
-/*
+    pcl::PointCloud<pcl::PointXYZ> point_cloud_for_image;
+    
+    /* 
     // Generate the data
     
     pcl::PointCloud<pcl::PointXYZ>::Ptr point_cloud (new pcl::PointCloud<pcl::PointXYZ>); // boost shared pointer
@@ -37,17 +38,20 @@ int main(int argc, char **argv) {
         point.x = 2.0f - y;
         point.y = y;
         point.z = z;
-        pointCloud->points.push_back(point);
+        point_cloud->points.push_back(point);
         }
     }
-    pointCloud->width = pointCloud->size();
-    pointCloud->height = 1;
+    point_cloud->width = point_cloud->size();
+    point_cloud->height = 1;
 
-    pcl::io::savePCDFileASCII ("test_pcd.pcd", *point_cloud);
-*/
-    
+    pcl::io::savePCDFileASCII ("./test_pcd.pcd", *point_cloud);
+
     pcl::PCDReader reader;
-    reader.read ("lidar_screenshot.pcd", point_cloud_lidar);
+    reader.read ("test_pcd.pcd", point_cloud_for_image);
+    */
+
+    pcl::PCDReader reader;
+    reader.read ("lidar_screenshot.pcd", point_cloud_for_image);
 
     // We now want to create a range image from the above point cloud, with a 1deg angular resolution
     float angularResolution = (float) (  1.0f * (M_PI/180.0f));  //   1.0 degree in radians
@@ -60,7 +64,7 @@ int main(int argc, char **argv) {
     int borderSize = 1;
 
     pcl::RangeImage range_image;
-    range_image.createFromPointCloud(point_cloud_lidar, angularResolution, maxAngleWidth, maxAngleHeight,
+    range_image.createFromPointCloud(point_cloud_for_image, angularResolution, maxAngleWidth, maxAngleHeight,
                                     sensorPose, coordinate_frame, noiseLevel, minRange, borderSize);
    
     /*
