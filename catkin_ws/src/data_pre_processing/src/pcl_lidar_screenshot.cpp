@@ -1,4 +1,5 @@
-// This script acquires the Livox Mid 40 data and subsequently visualizes a single frame using PCL viewer
+// This script acquires the Livox Mid 40 data and subsequently outputs the .pcd file of a single frame and 
+// visualizes a single frame using PCL viewer
 // Created by: Vice, 09.04.2021
 
 #include <pcl_lidar_screenshot.hpp>
@@ -22,11 +23,8 @@ pcl::visualization::PCLVisualizer::Ptr simpleVis (pcl::PointCloud<pcl::PointXYZ>
     _v->setBackgroundColor (0, 0, 0);
     _v->addPointCloud<pcl::PointXYZ>(cloud, "sample cloud");
     _v->addCoordinateSystem (1.0);
-    //_v->initCameraParameters ();
     _v->spin();
-    //_v->spinOnce (100);
     return (_v);
-    
 }
 
 void getAndView::lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& msg)
@@ -39,12 +37,19 @@ void getAndView::lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& 
 
     ROS_INFO_STREAM("Data acquired");
     
-    // Conver to plc cloud
+    // Convert to plc cloud
     pcl::fromPCLPointCloud2(pointCloud2, *cloud_out);
+    // Write out the cloud
+    // It is important to write out the cloud before it is being sent to visualizer
+    pcl::io::savePCDFileASCII ("lidar_screenshot.pcd", *cloud_out);
+    ROS_INFO_STREAM("Cloud saved");
 
     pcl::visualization::PCLVisualizer::Ptr viewer;
     viewer = simpleVis(cloud_out);
+
+
     
+
 }
 
 

@@ -545,6 +545,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/DependInfo.cmake"
   "data_pre_processing/CMakeFiles/acquire.dir/DependInfo.cmake"
   "data_pre_processing/CMakeFiles/pcl_lidar_view.dir/DependInfo.cmake"
+  "data_pre_processing/CMakeFiles/range_image_pcl.dir/DependInfo.cmake"
   "loam_livox/CMakeFiles/read_camera.dir/DependInfo.cmake"
   "loam_livox/CMakeFiles/livox_laserMapping.dir/DependInfo.cmake"
   "loam_livox/CMakeFiles/livox_scanRegistration.dir/DependInfo.cmake"

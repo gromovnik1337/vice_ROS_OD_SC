@@ -616,6 +616,19 @@ pcl_lidar_view/fast:
 .PHONY : pcl_lidar_view/fast
 
 #=============================================================================
+# Target rules for targets named range_image_pcl
+
+# Build rule for target.
+range_image_pcl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 range_image_pcl
+.PHONY : range_image_pcl
+
+# fast build rule for target.
+range_image_pcl/fast:
+	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image_pcl.dir/build.make data_pre_processing/CMakeFiles/range_image_pcl.dir/build
+.PHONY : range_image_pcl/fast
+
+#=============================================================================
 # Target rules for targets named read_camera
 
 # Build rule for target.
@@ -1329,6 +1342,7 @@ help:
 	@echo "... pcl_lidar_view"
 	@echo "... pubvel"
 	@echo "... pubvel_with_max"
+	@echo "... range_image_pcl"
 	@echo "... read_camera"
 	@echo "... reverse_cmd_vel"
 	@echo "... set_bg_color"

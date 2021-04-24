@@ -5,7 +5,7 @@
 
 
 // Declaration of the pointer for the visualizer is necessary
-// TODO Ask why!
+// Due to the fact that PCL visual
 getAndView::getAndView():
 _v (new pcl::visualization::PCLVisualizer("Viewer"))
 {
@@ -35,7 +35,7 @@ void getAndView::lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& 
 
     ROS_INFO_STREAM("Data acquired");
     
-    // Conver to plc cloud
+    // Convert to plc cloud
     pcl::fromPCLPointCloud2(pointCloud2, *cloud_out);
 
     // Update the visualizer

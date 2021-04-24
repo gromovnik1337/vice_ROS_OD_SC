@@ -97,6 +97,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/local/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -119,17 +130,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -231,6 +231,21 @@ pcl_lidar_view/fast:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build
 .PHONY : pcl_lidar_view/fast
 
+# Convenience name for target.
+data_pre_processing/CMakeFiles/range_image_pcl.dir/rule:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_pre_processing/CMakeFiles/range_image_pcl.dir/rule
+.PHONY : data_pre_processing/CMakeFiles/range_image_pcl.dir/rule
+
+# Convenience name for target.
+range_image_pcl: data_pre_processing/CMakeFiles/range_image_pcl.dir/rule
+
+.PHONY : range_image_pcl
+
+# fast build rule for target.
+range_image_pcl/fast:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image_pcl.dir/build.make data_pre_processing/CMakeFiles/range_image_pcl.dir/build
+.PHONY : range_image_pcl/fast
+
 src/acquisition.o: src/acquisition.cpp.o
 
 .PHONY : src/acquisition.o
@@ -312,6 +327,33 @@ src/pcl_lidar_view.cpp.s:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_view.dir/src/pcl_lidar_view.cpp.s
 .PHONY : src/pcl_lidar_view.cpp.s
 
+src/range_image_pcl.o: src/range_image_pcl.cpp.o
+
+.PHONY : src/range_image_pcl.o
+
+# target to build an object file
+src/range_image_pcl.cpp.o:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image_pcl.dir/build.make data_pre_processing/CMakeFiles/range_image_pcl.dir/src/range_image_pcl.cpp.o
+.PHONY : src/range_image_pcl.cpp.o
+
+src/range_image_pcl.i: src/range_image_pcl.cpp.i
+
+.PHONY : src/range_image_pcl.i
+
+# target to preprocess a source file
+src/range_image_pcl.cpp.i:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image_pcl.dir/build.make data_pre_processing/CMakeFiles/range_image_pcl.dir/src/range_image_pcl.cpp.i
+.PHONY : src/range_image_pcl.cpp.i
+
+src/range_image_pcl.s: src/range_image_pcl.cpp.s
+
+.PHONY : src/range_image_pcl.s
+
+# target to generate assembly for a file
+src/range_image_pcl.cpp.s:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image_pcl.dir/build.make data_pre_processing/CMakeFiles/range_image_pcl.dir/src/range_image_pcl.cpp.s
+.PHONY : src/range_image_pcl.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -328,6 +370,7 @@ help:
 	@echo "... acquire"
 	@echo "... pcl_lidar_screenshot"
 	@echo "... pcl_lidar_view"
+	@echo "... range_image_pcl"
 	@echo "... src/acquisition.o"
 	@echo "... src/acquisition.i"
 	@echo "... src/acquisition.s"
@@ -337,6 +380,9 @@ help:
 	@echo "... src/pcl_lidar_view.o"
 	@echo "... src/pcl_lidar_view.i"
 	@echo "... src/pcl_lidar_view.s"
+	@echo "... src/range_image_pcl.o"
+	@echo "... src/range_image_pcl.i"
+	@echo "... src/range_image_pcl.s"
 .PHONY : help
 
 

@@ -33,8 +33,10 @@ add_definitions(${PCL_DEFINITIONS})
 add_executable(acquire ./src/acquisition.cpp)
 add_executable(pcl_lidar_screenshot ./src/pcl_lidar_screenshot.cpp)
 add_executable(pcl_lidar_view ./src/pcl_lidar_view.cpp)
+add_executable(range_image_pcl ./src/range_image_pcl.cpp)
 
 # Specify libraries aganist which to link. Again, this line is to be copied for each distinct executable in the package
 target_link_libraries(acquire ${catkin_LIBRARIES})
 target_link_libraries(pcl_lidar_screenshot ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 target_link_libraries(pcl_lidar_view ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+target_link_libraries(range_image_pcl ${catkin_LIBRARIES} ${PCL_LIBRARIES})
