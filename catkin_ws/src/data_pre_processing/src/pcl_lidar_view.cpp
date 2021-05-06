@@ -4,8 +4,7 @@
 #include <pcl_lidar_view.hpp>
 
 
-// Declaration of the pointer for the visualizer is necessary
-// Due to the fact that PCL visual
+// Declaration of the pointer for the visualizer is necessary outside the constructor of the class
 getAndView::getAndView():
 _v (new pcl::visualization::PCLVisualizer("Viewer"))
 {

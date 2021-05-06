@@ -52,6 +52,7 @@ int main(int argc, char **argv) {
 
     pcl::PCDReader reader;
     reader.read ("lidar_screenshot.pcd", point_cloud_for_image);
+    ROS_INFO_STREAM("Here:\n");
 
     // We now want to create a range image from the above point cloud, with a 1deg angular resolution
     float angularResolution = (float) (  1.0f * (M_PI/180.0f));  //   1.0 degree in radians
