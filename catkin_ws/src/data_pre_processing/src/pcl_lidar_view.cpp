@@ -3,7 +3,6 @@
 
 #include <pcl_lidar_view.hpp>
 
-
 // Declaration of the pointer for the visualizer is necessary outside the constructor of the class
 getAndView::getAndView():
 _v (new pcl::visualization::PCLVisualizer("Viewer"))
@@ -16,7 +15,7 @@ _v (new pcl::visualization::PCLVisualizer("Viewer"))
     // Create and add a dummy, empty point cloud so it can be updated later
     pcl::PointCloud<pcl::PointXYZ>::Ptr dummy_cloud (new pcl::PointCloud<pcl::PointXYZ>);
     _v->addPointCloud<pcl::PointXYZ>(dummy_cloud, "sample cloud");
-    _v->spinOnce(1);
+    //_v->spinOnce(1);
 
 }
 
@@ -40,6 +39,7 @@ void getAndView::lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& 
     // Update the visualizer
     _v->updatePointCloud<pcl::PointXYZ>(cloud_out, "sample cloud"); // Has to have a same cloud ID as the cloud that needs to be updated, in this case the dummy one
     _v->spinOnce(1); // Refresh the visualizer
+    //_v->spin();
     
 }
 
