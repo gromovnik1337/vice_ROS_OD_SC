@@ -187,6 +187,36 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+agitr/CMakeFiles/pubvel_toggle.dir/rule:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/pubvel_toggle.dir/rule
+.PHONY : agitr/CMakeFiles/pubvel_toggle.dir/rule
+
+# Convenience name for target.
+pubvel_toggle: agitr/CMakeFiles/pubvel_toggle.dir/rule
+
+.PHONY : pubvel_toggle
+
+# fast build rule for target.
+pubvel_toggle/fast:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/build
+.PHONY : pubvel_toggle/fast
+
+# Convenience name for target.
+agitr/CMakeFiles/spawn_turtle.dir/rule:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/spawn_turtle.dir/rule
+.PHONY : agitr/CMakeFiles/spawn_turtle.dir/rule
+
+# Convenience name for target.
+spawn_turtle: agitr/CMakeFiles/spawn_turtle.dir/rule
+
+.PHONY : spawn_turtle
+
+# fast build rule for target.
+spawn_turtle/fast:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/spawn_turtle.dir/build.make agitr/CMakeFiles/spawn_turtle.dir/build
+.PHONY : spawn_turtle/fast
+
+# Convenience name for target.
 agitr/CMakeFiles/pubvel_with_max.dir/rule:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/pubvel_with_max.dir/rule
 .PHONY : agitr/CMakeFiles/pubvel_with_max.dir/rule
@@ -555,6 +585,33 @@ src/pubvel.cpp.s:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel.dir/build.make agitr/CMakeFiles/pubvel.dir/src/pubvel.cpp.s
 .PHONY : src/pubvel.cpp.s
 
+src/pubvel_toggle.o: src/pubvel_toggle.cpp.o
+
+.PHONY : src/pubvel_toggle.o
+
+# target to build an object file
+src/pubvel_toggle.cpp.o:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/src/pubvel_toggle.cpp.o
+.PHONY : src/pubvel_toggle.cpp.o
+
+src/pubvel_toggle.i: src/pubvel_toggle.cpp.i
+
+.PHONY : src/pubvel_toggle.i
+
+# target to preprocess a source file
+src/pubvel_toggle.cpp.i:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/src/pubvel_toggle.cpp.i
+.PHONY : src/pubvel_toggle.cpp.i
+
+src/pubvel_toggle.s: src/pubvel_toggle.cpp.s
+
+.PHONY : src/pubvel_toggle.s
+
+# target to generate assembly for a file
+src/pubvel_toggle.cpp.s:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/src/pubvel_toggle.cpp.s
+.PHONY : src/pubvel_toggle.cpp.s
+
 src/pubvel_with_max.o: src/pubvel_with_max.cpp.o
 
 .PHONY : src/pubvel_with_max.o
@@ -636,6 +693,33 @@ src/set_bg_color.cpp.s:
 	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/src/set_bg_color.cpp.s
 .PHONY : src/set_bg_color.cpp.s
 
+src/spawn_turtle.o: src/spawn_turtle.cpp.o
+
+.PHONY : src/spawn_turtle.o
+
+# target to build an object file
+src/spawn_turtle.cpp.o:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/spawn_turtle.dir/build.make agitr/CMakeFiles/spawn_turtle.dir/src/spawn_turtle.cpp.o
+.PHONY : src/spawn_turtle.cpp.o
+
+src/spawn_turtle.i: src/spawn_turtle.cpp.i
+
+.PHONY : src/spawn_turtle.i
+
+# target to preprocess a source file
+src/spawn_turtle.cpp.i:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/spawn_turtle.dir/build.make agitr/CMakeFiles/spawn_turtle.dir/src/spawn_turtle.cpp.i
+.PHONY : src/spawn_turtle.cpp.i
+
+src/spawn_turtle.s: src/spawn_turtle.cpp.s
+
+.PHONY : src/spawn_turtle.s
+
+# target to generate assembly for a file
+src/spawn_turtle.cpp.s:
+	cd /home/luxc/vice_ROS_OD_SC/catkin_ws/build && $(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/spawn_turtle.dir/build.make agitr/CMakeFiles/spawn_turtle.dir/src/spawn_turtle.cpp.s
+.PHONY : src/spawn_turtle.cpp.s
+
 src/subpose.o: src/subpose.cpp.o
 
 .PHONY : src/subpose.o
@@ -693,9 +777,11 @@ help:
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... hello"
 	@echo "... pubvel"
+	@echo "... pubvel_toggle"
 	@echo "... pubvel_with_max"
 	@echo "... reverse_cmd_vel"
 	@echo "... set_bg_color"
+	@echo "... spawn_turtle"
 	@echo "... subpose"
 	@echo "... src/hello.o"
 	@echo "... src/hello.i"
@@ -703,6 +789,9 @@ help:
 	@echo "... src/pubvel.o"
 	@echo "... src/pubvel.i"
 	@echo "... src/pubvel.s"
+	@echo "... src/pubvel_toggle.o"
+	@echo "... src/pubvel_toggle.i"
+	@echo "... src/pubvel_toggle.s"
 	@echo "... src/pubvel_with_max.o"
 	@echo "... src/pubvel_with_max.i"
 	@echo "... src/pubvel_with_max.s"
@@ -712,6 +801,9 @@ help:
 	@echo "... src/set_bg_color.o"
 	@echo "... src/set_bg_color.i"
 	@echo "... src/set_bg_color.s"
+	@echo "... src/spawn_turtle.o"
+	@echo "... src/spawn_turtle.i"
+	@echo "... src/spawn_turtle.s"
 	@echo "... src/subpose.o"
 	@echo "... src/subpose.i"
 	@echo "... src/subpose.s"

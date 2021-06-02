@@ -6,6 +6,7 @@ project(agitr)
 
 # Find the catkin build system, and any other packaes on which the build depends
 find_package(catkin REQUIRED COMPONENTS roscpp)
+find_package(catkin REQUIRED COMPONENTS roscpp )
 
 # Declare the catkin package
 catkin_package()
@@ -26,6 +27,8 @@ add_executable(subpose ./src/subpose.cpp)
 add_executable(reverse_cmd_vel ./src/reverse_cmd_vel.cpp)
 add_executable(set_bg_color ./src/set_bg_color.cpp)
 add_executable(pubvel_with_max ./src/pubvel_with_max.cpp)
+add_executable(spawn_turtle ./src/spawn_turtle.cpp)
+add_executable(pubvel_toggle ./src/pubvel_toggle.cpp)
 
 # Specify libraries aganist which to link. Again, this line is to be copied for each distinct executable in the package
 target_link_libraries(hello ${catkin_LIBRARIES})
@@ -34,4 +37,6 @@ target_link_libraries(subpose ${catkin_LIBRARIES})
 target_link_libraries(reverse_cmd_vel ${catkin_LIBRARIES})
 target_link_libraries(set_bg_color ${catkin_LIBRARIES})
 target_link_libraries(pubvel_with_max ${catkin_LIBRARIES})
+target_link_libraries(spawn_turtle ${catkin_LIBRARIES})
+target_link_libraries(pubvel_toggle ${catkin_LIBRARIES})
 

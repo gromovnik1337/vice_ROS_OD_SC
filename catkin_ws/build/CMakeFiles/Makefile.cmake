@@ -521,6 +521,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "agitr/CMakeFiles/pubvel_toggle.dir/DependInfo.cmake"
+  "agitr/CMakeFiles/spawn_turtle.dir/DependInfo.cmake"
   "agitr/CMakeFiles/pubvel_with_max.dir/DependInfo.cmake"
   "agitr/CMakeFiles/set_bg_color.dir/DependInfo.cmake"
   "agitr/CMakeFiles/reverse_cmd_vel.dir/DependInfo.cmake"

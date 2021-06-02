@@ -39,6 +39,8 @@
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/install/local.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/rebuild_cache.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/test.dir
+/home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/pubvel_toggle.dir
+/home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/spawn_turtle.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/pubvel_with_max.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/set_bg_color.dir
 /home/luxc/vice_ROS_OD_SC/catkin_ws/build/agitr/CMakeFiles/reverse_cmd_vel.dir

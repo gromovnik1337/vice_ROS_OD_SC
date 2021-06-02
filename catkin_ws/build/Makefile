@@ -304,6 +304,32 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named pubvel_toggle
+
+# Build rule for target.
+pubvel_toggle: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 pubvel_toggle
+.PHONY : pubvel_toggle
+
+# fast build rule for target.
+pubvel_toggle/fast:
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/build
+.PHONY : pubvel_toggle/fast
+
+#=============================================================================
+# Target rules for targets named spawn_turtle
+
+# Build rule for target.
+spawn_turtle: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 spawn_turtle
+.PHONY : spawn_turtle
+
+# fast build rule for target.
+spawn_turtle/fast:
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/spawn_turtle.dir/build.make agitr/CMakeFiles/spawn_turtle.dir/build
+.PHONY : spawn_turtle/fast
+
+#=============================================================================
 # Target rules for targets named pubvel_with_max
 
 # Build rule for target.
@@ -1341,11 +1367,13 @@ help:
 	@echo "... pcl_lidar_screenshot"
 	@echo "... pcl_lidar_view"
 	@echo "... pubvel"
+	@echo "... pubvel_toggle"
 	@echo "... pubvel_with_max"
 	@echo "... range_image_pcl"
 	@echo "... read_camera"
 	@echo "... reverse_cmd_vel"
 	@echo "... set_bg_color"
+	@echo "... spawn_turtle"
 	@echo "... subpose"
 .PHONY : help
 

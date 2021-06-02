@@ -27,7 +27,7 @@ int main(int argc, char **argv) {
     if(success) {
         ROS_INFO_STREAM("Spawned a turtle named " << resp.name);
     } else {
-        ROS_ERROR_STREAM("Failed to spawn.")
+        ROS_ERROR_STREAM("Failed to spawn.");
 
     }
 

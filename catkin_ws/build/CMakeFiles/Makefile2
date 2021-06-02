@@ -104,6 +104,8 @@ clean: loam_livox/clean
 # Directory level rules for directory agitr
 
 # Recursive "all" directory target.
+agitr/all: agitr/CMakeFiles/pubvel_toggle.dir/all
+agitr/all: agitr/CMakeFiles/spawn_turtle.dir/all
 agitr/all: agitr/CMakeFiles/pubvel_with_max.dir/all
 agitr/all: agitr/CMakeFiles/set_bg_color.dir/all
 agitr/all: agitr/CMakeFiles/reverse_cmd_vel.dir/all
@@ -119,6 +121,8 @@ agitr/preinstall:
 .PHONY : agitr/preinstall
 
 # Recursive "clean" directory target.
+agitr/clean: agitr/CMakeFiles/pubvel_toggle.dir/clean
+agitr/clean: agitr/CMakeFiles/spawn_turtle.dir/clean
 agitr/clean: agitr/CMakeFiles/pubvel_with_max.dir/clean
 agitr/clean: agitr/CMakeFiles/set_bg_color.dir/clean
 agitr/clean: agitr/CMakeFiles/reverse_cmd_vel.dir/clean
@@ -535,13 +539,67 @@ gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
+# Target rules for target agitr/CMakeFiles/pubvel_toggle.dir
+
+# All Build rule for target.
+agitr/CMakeFiles/pubvel_toggle.dir/all:
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/depend
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=26,27 "Built target pubvel_toggle"
+.PHONY : agitr/CMakeFiles/pubvel_toggle.dir/all
+
+# Build rule for subdir invocation for target.
+agitr/CMakeFiles/pubvel_toggle.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/pubvel_toggle.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 0
+.PHONY : agitr/CMakeFiles/pubvel_toggle.dir/rule
+
+# Convenience name for target.
+pubvel_toggle: agitr/CMakeFiles/pubvel_toggle.dir/rule
+
+.PHONY : pubvel_toggle
+
+# clean rule for target.
+agitr/CMakeFiles/pubvel_toggle.dir/clean:
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_toggle.dir/build.make agitr/CMakeFiles/pubvel_toggle.dir/clean
+.PHONY : agitr/CMakeFiles/pubvel_toggle.dir/clean
+
+#=============================================================================
+# Target rules for target agitr/CMakeFiles/spawn_turtle.dir
+
+# All Build rule for target.
+agitr/CMakeFiles/spawn_turtle.dir/all:
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/spawn_turtle.dir/build.make agitr/CMakeFiles/spawn_turtle.dir/depend
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/spawn_turtle.dir/build.make agitr/CMakeFiles/spawn_turtle.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=38,39 "Built target spawn_turtle"
+.PHONY : agitr/CMakeFiles/spawn_turtle.dir/all
+
+# Build rule for subdir invocation for target.
+agitr/CMakeFiles/spawn_turtle.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 agitr/CMakeFiles/spawn_turtle.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 0
+.PHONY : agitr/CMakeFiles/spawn_turtle.dir/rule
+
+# Convenience name for target.
+spawn_turtle: agitr/CMakeFiles/spawn_turtle.dir/rule
+
+.PHONY : spawn_turtle
+
+# clean rule for target.
+agitr/CMakeFiles/spawn_turtle.dir/clean:
+	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/spawn_turtle.dir/build.make agitr/CMakeFiles/spawn_turtle.dir/clean
+.PHONY : agitr/CMakeFiles/spawn_turtle.dir/clean
+
+#=============================================================================
 # Target rules for target agitr/CMakeFiles/pubvel_with_max.dir
 
 # All Build rule for target.
 agitr/CMakeFiles/pubvel_with_max.dir/all:
 	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/depend
 	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/pubvel_with_max.dir/build.make agitr/CMakeFiles/pubvel_with_max.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=26,27 "Built target pubvel_with_max"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=28,29 "Built target pubvel_with_max"
 .PHONY : agitr/CMakeFiles/pubvel_with_max.dir/all
 
 # Build rule for subdir invocation for target.
@@ -568,7 +626,7 @@ agitr/CMakeFiles/pubvel_with_max.dir/clean:
 agitr/CMakeFiles/set_bg_color.dir/all:
 	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/depend
 	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/set_bg_color.dir/build.make agitr/CMakeFiles/set_bg_color.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=34,35 "Built target set_bg_color"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=36,37 "Built target set_bg_color"
 .PHONY : agitr/CMakeFiles/set_bg_color.dir/all
 
 # Build rule for subdir invocation for target.
@@ -595,7 +653,7 @@ agitr/CMakeFiles/set_bg_color.dir/clean:
 agitr/CMakeFiles/reverse_cmd_vel.dir/all:
 	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/depend
 	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/reverse_cmd_vel.dir/build.make agitr/CMakeFiles/reverse_cmd_vel.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=32,33 "Built target reverse_cmd_vel"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=34,35 "Built target reverse_cmd_vel"
 .PHONY : agitr/CMakeFiles/reverse_cmd_vel.dir/all
 
 # Build rule for subdir invocation for target.
@@ -622,7 +680,7 @@ agitr/CMakeFiles/reverse_cmd_vel.dir/clean:
 agitr/CMakeFiles/subpose.dir/all:
 	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/subpose.dir/build.make agitr/CMakeFiles/subpose.dir/depend
 	$(MAKE) $(MAKESILENT) -f agitr/CMakeFiles/subpose.dir/build.make agitr/CMakeFiles/subpose.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=36,37 "Built target subpose"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=40,41 "Built target subpose"
 .PHONY : agitr/CMakeFiles/subpose.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1189,7 +1247,7 @@ data_pre_processing/CMakeFiles/pcl_lidar_view.dir/clean:
 data_pre_processing/CMakeFiles/range_image_pcl.dir/all:
 	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image_pcl.dir/build.make data_pre_processing/CMakeFiles/range_image_pcl.dir/depend
 	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image_pcl.dir/build.make data_pre_processing/CMakeFiles/range_image_pcl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=28,29 "Built target range_image_pcl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=30,31 "Built target range_image_pcl"
 .PHONY : data_pre_processing/CMakeFiles/range_image_pcl.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1216,7 +1274,7 @@ data_pre_processing/CMakeFiles/range_image_pcl.dir/clean:
 loam_livox/CMakeFiles/read_camera.dir/all:
 	$(MAKE) $(MAKESILENT) -f loam_livox/CMakeFiles/read_camera.dir/build.make loam_livox/CMakeFiles/read_camera.dir/depend
 	$(MAKE) $(MAKESILENT) -f loam_livox/CMakeFiles/read_camera.dir/build.make loam_livox/CMakeFiles/read_camera.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=30,31 "Built target read_camera"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=32,33 "Built target read_camera"
 .PHONY : loam_livox/CMakeFiles/read_camera.dir/all
 
 # Build rule for subdir invocation for target.
