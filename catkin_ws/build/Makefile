@@ -629,6 +629,19 @@ acquire/fast:
 .PHONY : acquire/fast
 
 #=============================================================================
+# Target rules for targets named range_image
+
+# Build rule for target.
+range_image: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 range_image
+.PHONY : range_image
+
+# fast build rule for target.
+range_image/fast:
+	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image.dir/build.make data_pre_processing/CMakeFiles/range_image.dir/build
+.PHONY : range_image/fast
+
+#=============================================================================
 # Target rules for targets named pcl_lidar_view
 
 # Build rule for target.
@@ -640,19 +653,6 @@ pcl_lidar_view: cmake_check_build_system
 pcl_lidar_view/fast:
 	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build
 .PHONY : pcl_lidar_view/fast
-
-#=============================================================================
-# Target rules for targets named range_image_pcl
-
-# Build rule for target.
-range_image_pcl: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 range_image_pcl
-.PHONY : range_image_pcl
-
-# fast build rule for target.
-range_image_pcl/fast:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image_pcl.dir/build.make data_pre_processing/CMakeFiles/range_image_pcl.dir/build
-.PHONY : range_image_pcl/fast
 
 #=============================================================================
 # Target rules for targets named read_camera
@@ -1369,7 +1369,7 @@ help:
 	@echo "... pubvel"
 	@echo "... pubvel_toggle"
 	@echo "... pubvel_with_max"
-	@echo "... range_image_pcl"
+	@echo "... range_image"
 	@echo "... read_camera"
 	@echo "... reverse_cmd_vel"
 	@echo "... set_bg_color"
