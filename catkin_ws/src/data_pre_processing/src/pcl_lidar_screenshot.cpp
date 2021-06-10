@@ -29,7 +29,6 @@ pcl::visualization::PCLVisualizer::Ptr simpleVis (pcl::PointCloud<pcl::PointXYZ>
 
 void getAndView::lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& msg)
 {
-   
     // Transform the message to a pcl::PCLPointCloud2
     pcl::PCLPointCloud2 pointCloud2;
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_out (new pcl::PointCloud<pcl::PointXYZ>);
@@ -41,7 +40,7 @@ void getAndView::lidarRawDataCallback(const sensor_msgs::PointCloud2::ConstPtr& 
     pcl::fromPCLPointCloud2(pointCloud2, *cloud_out);
     // Write out the cloud
     // It is important to write out the cloud before it is being sent to visualizer
-    pcl::io::savePCDFileASCII ("lidar_screenshot.pcd", *cloud_out);
+    pcl::io::savePCDFileASCII("lidar_screenshot.pcd", *cloud_out);
     ROS_INFO_STREAM("Cloud saved");
 
     pcl::visualization::PCLVisualizer::Ptr viewer;
