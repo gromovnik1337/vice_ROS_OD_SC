@@ -17,6 +17,11 @@ catkin_package(
      PCL
 )
 
+catkin_package()
+catkin_python_setup( )
+
+catkin_install_python(PROGRAMS scripts/simple_publisher.py DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
 # Specify the location of header files
 include_directories(
     ${catkin_INCLUDE_DIRS} 
@@ -40,3 +45,5 @@ target_link_libraries(acquire ${catkin_LIBRARIES})
 target_link_libraries(pcl_lidar_screenshot ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 target_link_libraries(pcl_lidar_view ${catkin_LIBRARIES} ${PCL_LIBRARIES})
 target_link_libraries(range_image ${catkin_LIBRARIES} ${PCL_LIBRARIES})
+
+

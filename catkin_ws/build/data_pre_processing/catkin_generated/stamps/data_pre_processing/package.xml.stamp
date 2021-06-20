@@ -12,13 +12,15 @@
   <license>TODO</license>
 
   <buildtool_depend>catkin</buildtool_depend>
-  <build_depend>roscpp</build_depend>
-  <exec_depend>roscpp</exec_depend>
-
-  <!--Check-->
-  <build_depend>libluxc</build_depend>
-  <exec_depend>libluxc</exec_depend>
   
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
   <export>
   </export>
 </package>

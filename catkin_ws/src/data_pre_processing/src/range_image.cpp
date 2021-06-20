@@ -108,11 +108,15 @@ int main (int argc, char** argv) {
   
   // Create a range image from the point cloud
   // Define the required parameters
-  float noise_level = 0.0; // This argument determines the size of the cell that determines the points that are to be used to generate the range image
-  float min_range = 0.0f;
+  float noise_level = 0.1; // This argument determines the size of the cell that determines the points that are to be used to generate the range image
+  float min_range = 0.1f;
   int border_size = 1;
   pcl::RangeImage::Ptr range_image_ptr(new pcl::RangeImage);
   pcl::RangeImage& range_image = *range_image_ptr;
+
+
+  ROS_INFO_STREAM("Vice debugging: here");
+
 
   // Creation of the range image
   range_image.createFromPointCloud (point_cloud, angular_resolution_x, angular_resolution_y,
