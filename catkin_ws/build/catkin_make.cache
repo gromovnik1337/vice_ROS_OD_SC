@@ -1,2 +1,2 @@
-agitr:data_pre_processing:loam_livox
+agitr:data_acquisition:data_pre_processing:loam_livox
 -DCATKIN_DEVEL_PREFIX=/home/luxc/vice_ROS_OD_SC/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/luxc/vice_ROS_OD_SC/catkin_ws/install -G Unix Makefiles

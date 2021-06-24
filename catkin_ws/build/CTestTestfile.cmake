@@ -6,5 +6,6 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("agitr")
+subdirs("data_acquisition")
 subdirs("data_pre_processing")
 subdirs("loam_livox")

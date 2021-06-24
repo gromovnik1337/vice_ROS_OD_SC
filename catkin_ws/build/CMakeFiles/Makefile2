@@ -74,6 +74,7 @@ CMAKE_BINARY_DIR = /home/luxc/vice_ROS_OD_SC/catkin_ws/build
 # The main recursive "all" target.
 all: gtest/all
 all: agitr/all
+all: data_acquisition/all
 all: data_pre_processing/all
 all: loam_livox/all
 
@@ -82,6 +83,7 @@ all: loam_livox/all
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
 preinstall: agitr/preinstall
+preinstall: data_acquisition/preinstall
 preinstall: data_pre_processing/preinstall
 preinstall: loam_livox/preinstall
 
@@ -95,6 +97,7 @@ clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/doxygen.dir/clean
 clean: gtest/clean
 clean: agitr/clean
+clean: data_acquisition/clean
 clean: data_pre_processing/clean
 clean: loam_livox/clean
 
@@ -148,13 +151,34 @@ agitr/clean: agitr/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 .PHONY : agitr/clean
 
 #=============================================================================
+# Directory level rules for directory data_acquisition
+
+# Recursive "all" directory target.
+data_acquisition/all: data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/all
+data_acquisition/all: data_acquisition/CMakeFiles/acquire.dir/all
+data_acquisition/all: data_acquisition/CMakeFiles/range_image.dir/all
+data_acquisition/all: data_acquisition/CMakeFiles/pcl_lidar_view.dir/all
+
+.PHONY : data_acquisition/all
+
+# Recursive "preinstall" directory target.
+data_acquisition/preinstall:
+
+.PHONY : data_acquisition/preinstall
+
+# Recursive "clean" directory target.
+data_acquisition/clean: data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/clean
+data_acquisition/clean: data_acquisition/CMakeFiles/acquire.dir/clean
+data_acquisition/clean: data_acquisition/CMakeFiles/range_image.dir/clean
+data_acquisition/clean: data_acquisition/CMakeFiles/pcl_lidar_view.dir/clean
+
+.PHONY : data_acquisition/clean
+
+#=============================================================================
 # Directory level rules for directory data_pre_processing
 
 # Recursive "all" directory target.
-data_pre_processing/all: data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/all
-data_pre_processing/all: data_pre_processing/CMakeFiles/acquire.dir/all
-data_pre_processing/all: data_pre_processing/CMakeFiles/range_image.dir/all
-data_pre_processing/all: data_pre_processing/CMakeFiles/pcl_lidar_view.dir/all
+data_pre_processing/all:
 
 .PHONY : data_pre_processing/all
 
@@ -164,10 +188,7 @@ data_pre_processing/preinstall:
 .PHONY : data_pre_processing/preinstall
 
 # Recursive "clean" directory target.
-data_pre_processing/clean: data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/clean
-data_pre_processing/clean: data_pre_processing/CMakeFiles/acquire.dir/clean
-data_pre_processing/clean: data_pre_processing/CMakeFiles/range_image.dir/clean
-data_pre_processing/clean: data_pre_processing/CMakeFiles/pcl_lidar_view.dir/clean
+data_pre_processing/clean: data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 .PHONY : data_pre_processing/clean
 
@@ -1160,112 +1181,139 @@ agitr/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
 .PHONY : agitr/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir
+# Target rules for target data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir
 
 # All Build rule for target.
-data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/all:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/depend
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build
+data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/all:
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/depend
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=20,21 "Built target pcl_lidar_screenshot"
-.PHONY : data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/all
+.PHONY : data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/all
 
 # Build rule for subdir invocation for target.
-data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/rule: cmake_check_build_system
+data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 0
-.PHONY : data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/rule
+.PHONY : data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/rule
 
 # Convenience name for target.
-pcl_lidar_screenshot: data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/rule
+pcl_lidar_screenshot: data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/rule
 
 .PHONY : pcl_lidar_screenshot
 
 # clean rule for target.
-data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/clean:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/clean
-.PHONY : data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/clean
+data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/clean:
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/clean
+.PHONY : data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/clean
 
 #=============================================================================
-# Target rules for target data_pre_processing/CMakeFiles/acquire.dir
+# Target rules for target data_acquisition/CMakeFiles/acquire.dir
 
 # All Build rule for target.
-data_pre_processing/CMakeFiles/acquire.dir/all:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/acquire.dir/build.make data_pre_processing/CMakeFiles/acquire.dir/depend
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/acquire.dir/build.make data_pre_processing/CMakeFiles/acquire.dir/build
+data_acquisition/CMakeFiles/acquire.dir/all:
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/acquire.dir/build.make data_acquisition/CMakeFiles/acquire.dir/depend
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/acquire.dir/build.make data_acquisition/CMakeFiles/acquire.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=1,2 "Built target acquire"
-.PHONY : data_pre_processing/CMakeFiles/acquire.dir/all
+.PHONY : data_acquisition/CMakeFiles/acquire.dir/all
 
 # Build rule for subdir invocation for target.
-data_pre_processing/CMakeFiles/acquire.dir/rule: cmake_check_build_system
+data_acquisition/CMakeFiles/acquire.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_pre_processing/CMakeFiles/acquire.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_acquisition/CMakeFiles/acquire.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 0
-.PHONY : data_pre_processing/CMakeFiles/acquire.dir/rule
+.PHONY : data_acquisition/CMakeFiles/acquire.dir/rule
 
 # Convenience name for target.
-acquire: data_pre_processing/CMakeFiles/acquire.dir/rule
+acquire: data_acquisition/CMakeFiles/acquire.dir/rule
 
 .PHONY : acquire
 
 # clean rule for target.
-data_pre_processing/CMakeFiles/acquire.dir/clean:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/acquire.dir/build.make data_pre_processing/CMakeFiles/acquire.dir/clean
-.PHONY : data_pre_processing/CMakeFiles/acquire.dir/clean
+data_acquisition/CMakeFiles/acquire.dir/clean:
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/acquire.dir/build.make data_acquisition/CMakeFiles/acquire.dir/clean
+.PHONY : data_acquisition/CMakeFiles/acquire.dir/clean
 
 #=============================================================================
-# Target rules for target data_pre_processing/CMakeFiles/range_image.dir
+# Target rules for target data_acquisition/CMakeFiles/range_image.dir
 
 # All Build rule for target.
-data_pre_processing/CMakeFiles/range_image.dir/all:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image.dir/build.make data_pre_processing/CMakeFiles/range_image.dir/depend
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image.dir/build.make data_pre_processing/CMakeFiles/range_image.dir/build
+data_acquisition/CMakeFiles/range_image.dir/all:
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/range_image.dir/build.make data_acquisition/CMakeFiles/range_image.dir/depend
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/range_image.dir/build.make data_acquisition/CMakeFiles/range_image.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=30,31 "Built target range_image"
-.PHONY : data_pre_processing/CMakeFiles/range_image.dir/all
+.PHONY : data_acquisition/CMakeFiles/range_image.dir/all
 
 # Build rule for subdir invocation for target.
-data_pre_processing/CMakeFiles/range_image.dir/rule: cmake_check_build_system
+data_acquisition/CMakeFiles/range_image.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_pre_processing/CMakeFiles/range_image.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_acquisition/CMakeFiles/range_image.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 0
-.PHONY : data_pre_processing/CMakeFiles/range_image.dir/rule
+.PHONY : data_acquisition/CMakeFiles/range_image.dir/rule
 
 # Convenience name for target.
-range_image: data_pre_processing/CMakeFiles/range_image.dir/rule
+range_image: data_acquisition/CMakeFiles/range_image.dir/rule
 
 .PHONY : range_image
 
 # clean rule for target.
-data_pre_processing/CMakeFiles/range_image.dir/clean:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image.dir/build.make data_pre_processing/CMakeFiles/range_image.dir/clean
-.PHONY : data_pre_processing/CMakeFiles/range_image.dir/clean
+data_acquisition/CMakeFiles/range_image.dir/clean:
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/range_image.dir/build.make data_acquisition/CMakeFiles/range_image.dir/clean
+.PHONY : data_acquisition/CMakeFiles/range_image.dir/clean
 
 #=============================================================================
-# Target rules for target data_pre_processing/CMakeFiles/pcl_lidar_view.dir
+# Target rules for target data_acquisition/CMakeFiles/pcl_lidar_view.dir
 
 # All Build rule for target.
-data_pre_processing/CMakeFiles/pcl_lidar_view.dir/all:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_view.dir/depend
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build
+data_acquisition/CMakeFiles/pcl_lidar_view.dir/all:
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/pcl_lidar_view.dir/build.make data_acquisition/CMakeFiles/pcl_lidar_view.dir/depend
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/pcl_lidar_view.dir/build.make data_acquisition/CMakeFiles/pcl_lidar_view.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num=22,23 "Built target pcl_lidar_view"
-.PHONY : data_pre_processing/CMakeFiles/pcl_lidar_view.dir/all
+.PHONY : data_acquisition/CMakeFiles/pcl_lidar_view.dir/all
 
 # Build rule for subdir invocation for target.
-data_pre_processing/CMakeFiles/pcl_lidar_view.dir/rule: cmake_check_build_system
+data_acquisition/CMakeFiles/pcl_lidar_view.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_pre_processing/CMakeFiles/pcl_lidar_view.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_acquisition/CMakeFiles/pcl_lidar_view.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 0
-.PHONY : data_pre_processing/CMakeFiles/pcl_lidar_view.dir/rule
+.PHONY : data_acquisition/CMakeFiles/pcl_lidar_view.dir/rule
 
 # Convenience name for target.
-pcl_lidar_view: data_pre_processing/CMakeFiles/pcl_lidar_view.dir/rule
+pcl_lidar_view: data_acquisition/CMakeFiles/pcl_lidar_view.dir/rule
 
 .PHONY : pcl_lidar_view
 
 # clean rule for target.
-data_pre_processing/CMakeFiles/pcl_lidar_view.dir/clean:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_view.dir/clean
-.PHONY : data_pre_processing/CMakeFiles/pcl_lidar_view.dir/clean
+data_acquisition/CMakeFiles/pcl_lidar_view.dir/clean:
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/pcl_lidar_view.dir/build.make data_acquisition/CMakeFiles/pcl_lidar_view.dir/clean
+.PHONY : data_acquisition/CMakeFiles/pcl_lidar_view.dir/clean
+
+#=============================================================================
+# Target rules for target data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir
+
+# All Build rule for target.
+data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/build.make data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/build.make data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
+.PHONY : data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/all
+
+# Build rule for subdir invocation for target.
+data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/luxc/vice_ROS_OD_SC/catkin_ws/build/CMakeFiles 0
+.PHONY : data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+# Convenience name for target.
+_catkin_empty_exported_target: data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/rule
+
+.PHONY : _catkin_empty_exported_target
+
+# clean rule for target.
+data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/build.make data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 #=============================================================================
 # Target rules for target loam_livox/CMakeFiles/read_camera.dir

@@ -612,7 +612,7 @@ pcl_lidar_screenshot: cmake_check_build_system
 
 # fast build rule for target.
 pcl_lidar_screenshot/fast:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_screenshot.dir/build
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/build.make data_acquisition/CMakeFiles/pcl_lidar_screenshot.dir/build
 .PHONY : pcl_lidar_screenshot/fast
 
 #=============================================================================
@@ -625,7 +625,7 @@ acquire: cmake_check_build_system
 
 # fast build rule for target.
 acquire/fast:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/acquire.dir/build.make data_pre_processing/CMakeFiles/acquire.dir/build
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/acquire.dir/build.make data_acquisition/CMakeFiles/acquire.dir/build
 .PHONY : acquire/fast
 
 #=============================================================================
@@ -638,7 +638,7 @@ range_image: cmake_check_build_system
 
 # fast build rule for target.
 range_image/fast:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/range_image.dir/build.make data_pre_processing/CMakeFiles/range_image.dir/build
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/range_image.dir/build.make data_acquisition/CMakeFiles/range_image.dir/build
 .PHONY : range_image/fast
 
 #=============================================================================
@@ -651,8 +651,21 @@ pcl_lidar_view: cmake_check_build_system
 
 # fast build rule for target.
 pcl_lidar_view/fast:
-	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build.make data_pre_processing/CMakeFiles/pcl_lidar_view.dir/build
+	$(MAKE) $(MAKESILENT) -f data_acquisition/CMakeFiles/pcl_lidar_view.dir/build.make data_acquisition/CMakeFiles/pcl_lidar_view.dir/build
 .PHONY : pcl_lidar_view/fast
+
+#=============================================================================
+# Target rules for targets named _catkin_empty_exported_target
+
+# Build rule for target.
+_catkin_empty_exported_target: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 _catkin_empty_exported_target
+.PHONY : _catkin_empty_exported_target
+
+# fast build rule for target.
+_catkin_empty_exported_target/fast:
+	$(MAKE) $(MAKESILENT) -f data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/build.make data_pre_processing/CMakeFiles/_catkin_empty_exported_target.dir/build
+.PHONY : _catkin_empty_exported_target/fast
 
 #=============================================================================
 # Target rules for targets named read_camera
@@ -1291,6 +1304,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... _catkin_empty_exported_target"
 	@echo "... actionlib_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_eus"
 	@echo "... actionlib_generate_messages_lisp"

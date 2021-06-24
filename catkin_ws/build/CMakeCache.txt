@@ -706,6 +706,12 @@ cpp_common_DIR:PATH=/opt/ros/melodic/share/cpp_common/cmake
 cv_bridge_DIR:PATH=/opt/ros/melodic/share/cv_bridge/cmake
 
 //Value Computed by CMake
+data_acquisition_BINARY_DIR:STATIC=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/data_acquisition
+
+//Value Computed by CMake
+data_acquisition_SOURCE_DIR:STATIC=/home/luxc/vice_ROS_OD_SC/catkin_ws/src/data_acquisition
+
+//Value Computed by CMake
 data_pre_processing_BINARY_DIR:STATIC=/home/luxc/vice_ROS_OD_SC/catkin_ws/build/data_pre_processing
 
 //Value Computed by CMake
@@ -1050,7 +1056,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=8
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
