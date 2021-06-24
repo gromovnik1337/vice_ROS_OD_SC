@@ -65,3 +65,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/data_pre_processing" TYPE PROGRAM FILES "/home/luxc/vice_ROS_OD_SC/catkin_ws/build/data_pre_processing/catkin_generated/installspace/simple_subscriber.py")
 endif()
 
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/data_pre_processing" TYPE PROGRAM FILES "/home/luxc/vice_ROS_OD_SC/catkin_ws/build/data_pre_processing/catkin_generated/installspace/clean_point_cloud.py")
+endif()
+

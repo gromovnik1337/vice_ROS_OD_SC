@@ -83,7 +83,7 @@ int main (int argc, char** argv) {
     std::string filename = argv[pcd_filename_indices[0]];
     if (pcl::io::loadPCDFile (filename, point_cloud) == -1)
     {
-      std::cout << "Was not able to open file \""<<filename<<"\".\n";
+      std::cout << "Was not able to open file \""<< filename<< "\".\n";
       printUsage (argv[0]);
       return 0;
     }
@@ -113,10 +113,6 @@ int main (int argc, char** argv) {
   int border_size = 1;
   pcl::RangeImage::Ptr range_image_ptr(new pcl::RangeImage);
   pcl::RangeImage& range_image = *range_image_ptr;
-
-
-  ROS_INFO_STREAM("Vice debugging: here");
-
 
   // Creation of the range image
   range_image.createFromPointCloud (point_cloud, angular_resolution_x, angular_resolution_y,
